@@ -20,7 +20,7 @@ export class AddbComponent implements OnInit {
   constructor(private router: Router,public traineeservice: TraineeserviceService) {
     
 
-  }
+  } 
   onSubmit() {
     var d1=new Date();
     this.batch.batchCreatedDate=d1.getFullYear()+"-"+(d1.getMonth()+1)+"-"+d1.getDate();

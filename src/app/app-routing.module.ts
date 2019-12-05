@@ -13,7 +13,10 @@ const routes: Routes = [
     path:'',
     component:DashboardComponent
   },
-
+  { 
+    path: 'attendance', 
+    loadChildren:"./attendance/attendance.module#AttendanceModule"
+  },
   {
     path:'dashboard',
     component:DashboardComponent
