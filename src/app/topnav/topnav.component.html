@@ -24,23 +24,23 @@
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Main Navigation</li>
           <li class="treeview">
-            <a href="#">
-              <i class="fa fa-users"></i>
-              <span class="sp">Attendance</span> 
-            <span class="pull-right-container">
+
+            <a href="#" id="attendance">
+              <i class="fa fa-dashboard"></i> <span class="sp">Attendance</span>
+         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
          <ul class="treeview-menu">
-              <li><a routerLink="/attendance/daily"><i class="fa fa-circle-o"></i>daily</a></li>
-        </ul>
-        </li>
-          <li >
-            
-        
-        </li>
+
+          <li><a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i>daily</a></li>
+
+            </ul>
+          </li>
+
+
           <li class="treeview">
-            <a href="#">
+            <a href="#" id="batch">
               <i class="fa fa-users"></i>
               <span class="sp">Batch</span> 
             <span class="pull-right-container">
@@ -48,12 +48,12 @@
               </span>
             </a>
          <ul class="treeview-menu">
-              <li><a routerLink="/batch/addb"><i class="fa fa-circle-o"></i>Add</a></li>
-              <li><a routerLink="/batch/viewb"><i class="fa fa-circle-o"></i>View</a></li>
+              <li><a routerLink="/batch/addb" id="batchadd"><i class="fa fa-circle-o"></i>Add</a></li>
+              <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i>View</a></li>
         </ul>
         </li>
           <li class="treeview">
-            <a href="#">
+            <a href="#" id="student">
               <i class="fa fa-user-plus"></i>
               <span class="sp">Student</span> 
             <span class="pull-right-container">
@@ -61,13 +61,13 @@
               </span>
             </a>
          <ul class="treeview-menu">
-              <li><a routerLink="/student/freshers"><i class="fa fa-circle-o"></i>fresher</a></li>
-              <li><a routerLink="/student/upskilling"><i class="fa fa-circle-o"></i>upskilling</a></li>
-              <li><a routerLink="/student/views"><i class="fa fa-circle-o"></i>View</a></li>
+              <li><a routerLink="/student/freshers" id="fresher"><i class="fa fa-circle-o"></i>fresher</a></li>
+              <li><a routerLink="/student/upskilling" id="upskilling"><i class="fa fa-circle-o"></i>upskilling</a></li>
+              <li><a routerLink="/student/views" id="studentview"><i class="fa fa-circle-o"></i>View</a></li>
         </ul>
         </li>
     <li class="treeview">
-            <a href="#">
+            <a href="#" id="coursetracking">
               <i class="fa fa-files-o"></i>
               <span class="sp">Course Tracking</span> 
             <span class="pull-right-container">
@@ -75,14 +75,14 @@
               </span>
             </a>
          <ul class="treeview-menu">
-              <li><a routerLink="/coursetracking/add"><i class="fa fa-circle-o"></i>Add</a></li>
+              <li><a routerLink="/coursetracking/add" id="courseadd"><i class="fa fa-circle-o"></i>Add</a></li>
               
-              <li><a routerLink="/coursetracking/viewc"><i class="fa fa-circle-o"></i>View</a></li>
+              <li><a routerLink="/coursetracking/viewc" id="courseview"><i class="fa fa-circle-o"></i>View</a></li>
   </ul>
   </li>
   
 <li class="treeview">
-  <a href="#">
+  <a href="#" id="trainer">
     <i class="fa fa-user"></i>
     <span class="sp">Trainer</span> 
   <span class="pull-right-container">
@@ -90,9 +90,15 @@
     </span>
   </a>
 <ul class="treeview-menu">
-    <li><a routerLink="/trainer/addt"><i class="fa fa-circle-o"></i>Add</a></li>
-    <li><a routerLink="/trainer/viewt"><i class="fa fa-circle-o"></i>View</a></li>
+    <li><a routerLink="/trainer/addt" id="traineradd"><i class="fa fa-circle-o"></i>Add</a></li>
+    <li><a routerLink="/trainer/viewt" id="trainerview"><i class="fa fa-circle-o"></i>View</a></li>
 </ul>
+</li>
+<li class="treeview">
+  <a routerLink="/otherforms">
+    <i class="fa fa-file-text-o"></i>
+    <span class="sp">OtherForms</span> 
+  </a>
 </li>
       </ul>
       </section>

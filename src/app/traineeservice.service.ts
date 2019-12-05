@@ -58,4 +58,5 @@ return this.http.get<Issue[]>(this.Url+"/get")
       return this.http.post<Amenities>(this.Url+"/insert",amenities);
 
     }
+  
 }

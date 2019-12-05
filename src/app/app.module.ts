@@ -17,6 +17,7 @@ import * as Charts from "fusioncharts/fusioncharts.charts";
 import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 
 import * as Widgets from 'fusioncharts/fusioncharts.widgets';
+import { OtherformsComponent } from './otherforms/otherforms.component';
 FusionChartsModule.fcRoot(FusionCharts, Charts,Widgets, FusionTheme);
 // Import FusionCharts library and chart modules
 
@@ -25,6 +26,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts,Widgets, FusionTheme);
     AppComponent,
     TopnavComponent,
     DashboardComponent,
+    OtherformsComponent,
 
   ],
   imports: [
