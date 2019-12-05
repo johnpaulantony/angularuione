@@ -1,4 +1,5 @@
 <div class="d-lg-flex d-md-flex flex-row">
+<<<<<<< HEAD
     <fieldset class="col-sm-3 col-md-4">
         <legend>Batch Selection Details</legend>
         <form (ngSubmit)="onSubmit()">
@@ -50,3 +51,101 @@
                                                 </form>
                                             </fieldset>
                                             </div>
+=======
+  <fieldset class="col-sm-3 col-md-4 my-3">
+    <legend>Batch Selection Details</legend>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Month and Year of joining</label>
+        <input type="date"
+               (blur)="generate()"
+               class="form-control"
+               id="date"
+               name="date"
+               #date
+               placeholder="Year of passing">
+      </div>
+      <div class="form-group">
+        <label>Course</label>
+        <select id="course"
+                (change)="generate()"
+                class="form-control"
+                #course_name_1
+                name="course">
+          <option *ngFor="let batch of course"
+                  value={{batch.course_name}}>
+            {{batch.course_name}}
+          </option>
+        </select>
+        <br />
+
+
+      </div>
+      <div class="form-group">
+        <label>Type of Student</label>
+        <select (change)="generate()"
+                class="form-control"
+                #type
+                id="type"
+                name="stu">
+
+          <option value="Upskilling">UpSkilling</option>
+          <option value="Fresher">Fresher</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Batch Name Generation</label>
+        <input (blur)="generate()"
+               #batchname
+               id="batchname"
+               type="text"
+               class="form-control" [(ngModel)]="batch.batchName" name="batchName" />
+      </div>
+      <div class="form-group">
+        <label>Course</label>
+        <select id="course"                
+                class="form-control"                
+                name="course" [(ngModel)]="courseName">
+          <option *ngFor="let batch of course"
+                  value={{batch.courseId}}>
+            {{batch.course_name}}
+          </option>
+        </select>
+        <br />
+      </div>
+      <div class="form-group">
+        <label>Student Status</label>
+        <select class="form-control"
+                id="exampleFormControlSelect1" [(ngModel)]="batch.batchStatus" name="type">
+          <option>Finished</option>
+          <option>Current</option>
+          <option>Upcoming</option>
+        </select>
+      </div>
+      <button class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
+      <br>
+    </form>
+  </fieldset>#
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="result1; then condition1 else condition2"></div>
+        <ng-template #condition1>Success</ng-template>
+        <ng-template #condition2>Failed</ng-template>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="gotoadd()">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+>>>>>>> ee27f39d520623a1261362c9571d44f98098b0c1

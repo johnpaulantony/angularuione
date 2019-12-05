@@ -24,6 +24,7 @@
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Main Navigation</li>
           <li class="treeview">
+
             <a href="#" id="attendance">
               <i class="fa fa-dashboard"></i> <span class="sp">Attendance</span>
          <span class="pull-right-container">
@@ -31,13 +32,13 @@
               </span>
             </a>
          <ul class="treeview-menu">
-              <li><a href="#" id="daily"><i class="fa fa-circle-o"></i> Daily</a></li>
+
+          <li><a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i>daily</a></li>
+
             </ul>
           </li>
-          <li >
-            
-        
-        </li>
+
+
           <li class="treeview">
             <a href="#" id="batch">
               <i class="fa fa-users"></i>
@@ -92,6 +93,12 @@
     <li><a routerLink="/trainer/addt" id="traineradd"><i class="fa fa-circle-o"></i>Add</a></li>
     <li><a routerLink="/trainer/viewt" id="trainerview"><i class="fa fa-circle-o"></i>View</a></li>
 </ul>
+</li>
+<li class="treeview">
+  <a routerLink="/otherforms">
+    <i class="fa fa-file-text-o"></i>
+    <span class="sp">OtherForms</span> 
+  </a>
 </li>
       </ul>
       </section>

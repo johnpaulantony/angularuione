@@ -1,1 +1,21 @@
 <p>daily works!</p>
+<fieldset class="col-sm-3 col-md-6 b ">
+    <legend>Attendance</legend>
+    <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+    <label>Date:</label>
+    <input type="date" class="form-control" name="date" >
+    </div> 
+    <div class="form-group">
+        <label>Batch:</label>
+        <select class="form-control" name="batch" placeholder="Batch">
+        <option></option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label>Session:</label>
+        <select class="form-control" name="session" placeholder="Session">
+        <option>Forenoon</option>
+        <option>Afternoon</option>
+    </select>
+</div></form></fieldset>

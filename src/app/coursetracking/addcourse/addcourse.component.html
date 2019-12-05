@@ -1,4 +1,4 @@
-<fieldset class="col-sm-3 col-md-6">
+<fieldset class="col-sm-3 col-md-6 b">
     <legend>Add Courses</legend>
     <form (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -9,12 +9,35 @@
       <label>Course Description</label>
       <input class="form-control" name="cdescription" id="cdes" [(ngModel)]="course.description" placeholder="Course Description">
     </div>
-    <button class="btn btn-primary my-2">Submit</button>
+    <button class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
     <br>
    
 </form>
 </fieldset>
-<div class="card my-5">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="result1; then condition1 else condition2"></div>
+        <ng-template #condition1>Success</ng-template>
+        <ng-template #condition2>Failed</ng-template>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="gotoadd()">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+<fieldset class="col-sm-3 col-md-6">
+
+<div class="card my-5"> 
   <div class="card-body">
   <table class="table table-bordered table-striped">
   <thead class="thead-dark">
@@ -34,4 +57,5 @@
   </table>
   </div>
   </div>
+  </fieldset>
  

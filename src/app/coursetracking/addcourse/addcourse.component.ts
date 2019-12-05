@@ -13,17 +13,16 @@ export class AddcourseComponent implements OnInit {
   course: Issue;
   result: any;
   course1: Issue[];
+  result1:boolean;
   constructor(private router: Router, private traineeservice: TraineeserviceService) {
     this.course = new Issue();
   }
   
   onSubmit() {
-    this.traineeservice.save(this.course).subscribe(result => this.gotoadd());
-    if(this.result==true){alert("success")}
-    else alert("fail")
+    this.traineeservice.save(this.course).subscribe(result => this.result, this.result1=this.result);
   }
   gotoadd(){
-    this.router.navigate(['/add'])
+    this.router.navigate(['../coursetracking/add'])
   }
  
 
