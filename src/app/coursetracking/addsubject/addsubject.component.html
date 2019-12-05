@@ -1,0 +1,25 @@
+<p>addsubject works!</p>
+<fieldset class="col-sm-3 col-md-6">
+    <legend>Add Subjects</legend>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Course Name</label>
+            <select class="form-control" [(ngModel)]="test.courseId" name="courseId">
+                <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Subject Name</label>
+            <input class="form-control" name="sname" [(ngModel)]="test.subjectName" placeholder="Subject Name">
+        </div>
+        <div class="form-group">
+            <label>Subject Description</label>
+            <input class="form-control" name="sdescription" [(ngModel)]="test.description" placeholder="Subject Description">
+        </div>
+        <button class="btn btn-primary my-2">Submit</button>
+        <br>
+
+    </form>
+</fieldset>

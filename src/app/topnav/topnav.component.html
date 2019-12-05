@@ -1,0 +1,110 @@
+  <div class="wrapper">
+  
+    <header class="main-header">
+      <a href="#" class="logo">
+      <span class="logo-mini">SMI</span>
+        <span class="logo-lg"><b>SMI</b>Innothink</span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+  
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav d-flex flex-row">
+            <li><a routerLink="/dashboard"><i class="fa fa-delicious mx-2"></i><b>Dashboard</b></a></li>
+            <li><i class="fa fa-power-off mx-3" style="color:white;"></i></li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="header">Main Navigation</li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-dashboard"></i> <span class="sp">Attendance</span>
+         <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+         <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> Daily</a></li>
+            </ul>
+          </li>
+          <li >
+            
+        
+        </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-users"></i>
+              <span class="sp">Batch</span> 
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+         <ul class="treeview-menu">
+              <li><a routerLink="/batch/addb"><i class="fa fa-circle-o"></i>Add</a></li>
+              <li><a routerLink="/batch/viewb"><i class="fa fa-circle-o"></i>View</a></li>
+        </ul>
+        </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-user-plus"></i>
+              <span class="sp">Student</span> 
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+         <ul class="treeview-menu">
+              <li><a routerLink="/student/freshers"><i class="fa fa-circle-o"></i>fresher</a></li>
+              <li><a routerLink="/student/upskilling"><i class="fa fa-circle-o"></i>upskilling</a></li>
+              <li><a routerLink="/student/views"><i class="fa fa-circle-o"></i>View</a></li>
+        </ul>
+        </li>
+    <li class="treeview">
+            <a href="#">
+              <i class="fa fa-files-o"></i>
+              <span class="sp">Course Tracking</span> 
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+         <ul class="treeview-menu">
+              <li><a routerLink="/coursetracking/add"><i class="fa fa-circle-o"></i>Add</a></li>
+              
+              <li><a routerLink="/coursetracking/viewc"><i class="fa fa-circle-o"></i>View</a></li>
+  </ul>
+  </li>
+  
+<li class="treeview">
+  <a href="#">
+    <i class="fa fa-user"></i>
+    <span class="sp">Trainer</span> 
+  <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+<ul class="treeview-menu">
+    <li><a routerLink="/trainer/addt"><i class="fa fa-circle-o"></i>Add</a></li>
+    <li><a routerLink="/trainer/viewt"><i class="fa fa-circle-o"></i>View</a></li>
+</ul>
+</li>
+      </ul>
+      </section>
+     
+    </aside>
+    
+    <div class="content-wrapper">
+     <section class="content-header">
+      
+       <br>
+        <router-outlet></router-outlet>
+      </section> 
+           <div class="control-sidebar-bg"></div>
+  </div> 
+    </div> 
+  
