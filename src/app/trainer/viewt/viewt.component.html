@@ -1,2 +1,28 @@
-
-<p>viewt works!</p>
+<p>viewc works!</p>
+<fieldset class="col-sm-3 col-md-8">
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Trainer Name</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Mail Id</th>
+            <th scope="col">Technology Taken</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let courses of course">
+            <td>{{ courses.courseId }}</td>
+            <td>{{ courses.course_name }}</td>
+            <td>{{courses.description}}</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</fieldset>
