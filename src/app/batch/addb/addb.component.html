@@ -1,5 +1,5 @@
 <div class="d-lg-flex d-md-flex flex-row">
-  <fieldset class="col-sm-3 col-md-4">
+  <fieldset class="col-sm-3 col-md-4 my-3">
     <legend>Batch Selection Details</legend>
     <form (ngSubmit)="onSubmit()">
       <div class="form-group">
@@ -69,8 +69,29 @@
           <option>Upcoming</option>
         </select>
       </div>
-      <button class="btn btn-primary my-2">Submit</button>
+      <button class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
       <br>
     </form>
   </fieldset>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="result1; then condition1 else condition2"></div>
+        <ng-template #condition1>Success</ng-template>
+        <ng-template #condition2>Failed</ng-template>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="gotoadd()">Ok</button>
+      </div>
+    </div>
+  </div>
 </div>

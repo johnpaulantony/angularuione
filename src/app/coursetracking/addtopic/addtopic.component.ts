@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TraineeserviceService } from '../../traineeservice.service';
 import { Issue } from '../../models/issue';
-
+import { Router, } from '@angular/router';
 @Component({
   selector: 'app-addtopic',
   templateUrl: './addtopic.component.html',
@@ -19,15 +19,18 @@ export class AddtopicComponent implements OnInit {
   subject: Issue[];
   getSubject:Issue[];
   sample:Issue;
-
-  constructor(public traineeservice: TraineeserviceService) {
+  result1:boolean;
+  constructor(private router: Router,public traineeservice: TraineeserviceService) {
     this.test = new Issue();
 
   }
   onSubmit() {
-    this.traineeservice.saveTopic(this.test).subscribe(result => this.result);
+    this.traineeservice.saveTopic(this.test).subscribe(result => this.result, this.result1=this.result);
   }
-
+  gotoadd(){
+    this.router.navigate(['../coursetracking/add'])
+  }
+ 
   ngOnInit() {
 
     this.traineeservice.getCourseDetails().subscribe(data => { this.course = data; })
