@@ -1,52 +1,76 @@
 <div class="d-lg-flex d-md-flex flex-row">
-    <fieldset class="col-sm-3 col-md-4">
-        <legend>Batch Selection Details</legend>
-        <form (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                        <label>Month and Year of joining</label>
-                        <input type="date" class="form-control" name="cdescription" placeholder="Year of passing"  >
-                        </div>
-                        <div class="form-group">
-                                <label>Course</label>
-                                <select >
-                                  <option *ngFor="let batch of course" value= {{batch.courseID}}>
-                                     {{batch.coursename}}
-                                  </option>
-                                </select>
-                                <br/>
-                               Name:{{batch.coursename}}
-      
-                              </div>
-                              <div class="form-group">
-                                    <label>Type of Student</label>
-                                    <select class="form-control"  name="stu" [(value)]="select1" >
-                                
-                                     <option value="Upskilling">UpSkilling</option>
-                                      <option value="Fresher">Fresher</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                        <label>Batch Name Generation</label>
-                                        <input type="text" class="form-control" >{{select1}}
-                                        </div>
-                                        <div class="form-group">
-                                                <label>Course Selection</label>
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                        <option>Java</option>
-                                                        <option>UI/UX</option>
-                                                        <option>Testing</option>
-                                                </select>
-                                              </div>
-                                              <div class="form-group">
-                                                    <label>Student Status</label>
-                                                    <select class="form-control" id="exampleFormControlSelect1">
-                                                      <option>Finished</option>
-                                                      <option>Current</option>
-                                                      <option>Upcoming</option>
-                                                    </select>
-                                                  </div>
-                                                  <button class="btn btn-primary my-2">Submit</button>
-                                                  <br>
-                                                </form>
-                                            </fieldset>
-                                            </div>
+  <fieldset class="col-sm-3 col-md-4">
+    <legend>Batch Selection Details</legend>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Month and Year of joining</label>
+        <input type="date"
+               (blur)="generate()"
+               class="form-control"
+               id="date"
+               name="date"
+               #date
+               placeholder="Year of passing">
+      </div>
+      <div class="form-group">
+        <label>Course</label>
+        <select id="course"
+                (change)="generate()"
+                class="form-control"
+                #course_name_1
+                name="course">
+          <option *ngFor="let batch of course"
+                  value={{batch.course_name}}>
+            {{batch.course_name}}
+          </option>
+        </select>
+        <br />
+
+
+      </div>
+      <div class="form-group">
+        <label>Type of Student</label>
+        <select (change)="generate()"
+                class="form-control"
+                #type
+                id="type"
+                name="stu">
+
+          <option value="Upskilling">UpSkilling</option>
+          <option value="Fresher">Fresher</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Batch Name Generation</label>
+        <input (blur)="generate()"
+               #batchname
+               id="batchname"
+               type="text"
+               class="form-control" [(ngModel)]="batch.batchName" name="batchName" />
+      </div>
+      <div class="form-group">
+        <label>Course</label>
+        <select id="course"                
+                class="form-control"                
+                name="course" [(ngModel)]="courseName">
+          <option *ngFor="let batch of course"
+                  value={{batch.courseId}}>
+            {{batch.course_name}}
+          </option>
+        </select>
+        <br />
+      </div>
+      <div class="form-group">
+        <label>Student Status</label>
+        <select class="form-control"
+                id="exampleFormControlSelect1" [(ngModel)]="batch.batchStatus" name="type">
+          <option>Finished</option>
+          <option>Current</option>
+          <option>Upcoming</option>
+        </select>
+      </div>
+      <button class="btn btn-primary my-2">Submit</button>
+      <br>
+    </form>
+  </fieldset>
+</div>
