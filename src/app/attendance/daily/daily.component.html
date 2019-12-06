@@ -1,26 +1,28 @@
-<fieldset class="col-sm-3 col-md-6 b ">
+<fieldset class="col-md-12 b">
     <legend>Attendance</legend>
     <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
+            <div class="d-flex flex-row">
+    <div class="form-group col-xs-2 col-md-4">
     <label>Date:</label>
     <input type="date" class="form-control" name="date" >
     </div> 
-    <div class="form-group">
+    <div class="form-group col-md-4">
         <label>Batch:</label>
-        <select class="form-control" name="batch"     placeholder="Batch" >
+        <select class="form-control" name="batch" placeholder="Batch" >
         <option *ngFor="let sub of batch1" value="{{sub.batchId}}" >{{sub.batchName}}</option>
         </select>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-4">
         <label>Session:</label>
         <select class="form-control" name="session" placeholder="Session">
         <option>Forenoon</option>
         <option>Afternoon</option>
     </select>
-</div></form></fieldset>
+</div></div></form>
+</fieldset>
 
 
-<fieldset class="col-sm-3 col-md-6">
+<fieldset class="col-md-12">
     <div class="card my-5"> 
       <div class="card-body">
       <table class="table table-bordered table-striped">
@@ -34,14 +36,11 @@
       <tr>
       <td>surendran </td>
      <td><div class="form-group">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
-            <label class="form-check-label" for="inlineRadio1">Present</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
-            <label class="form-check-label" for="inlineRadio2">Absent</label>
-          </div></div></td>
+        <input type="checkbox" *ngIf="result1; then condition1 else condition2" value="">
+          <ng-template #condition1>Present</ng-template>
+          <ng-template #condition2>Absent</ng-template>
+    </div>
+</td>
       </tr>
       </tbody>
       </table>
