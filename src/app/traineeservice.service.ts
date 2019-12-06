@@ -16,7 +16,7 @@ export class TraineeserviceService {
     public getSubjectDetails(): Observable<Issue[]> {
       return this.http.get<Issue[]>(this.Url+"/getsubject");
     }
-    
+  
     public save(course: Issue) {
       return this.http.post<Issue>(this.Url+"/insert",course);
     }
@@ -34,6 +34,9 @@ export class TraineeserviceService {
     public saveBatch(course:Issue){
       console.log(course.batchName)
       return this.http.post<Issue>(this.Url+"/insertbatch",course);
+    }
+    public getbatch():Observable<Issue[]>{
+return this.http.get<Issue[]>(this.Url+"/get")
     }
     public getstudent(): Observable<Studentdetails[]> {
       return this.http.get<Studentdetails[]>(this.Url+"/get");
@@ -55,4 +58,5 @@ export class TraineeserviceService {
       return this.http.post<Amenities>(this.Url+"/insert",amenities);
 
     }
+  
 }

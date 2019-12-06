@@ -1,30 +1,35 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Issue } from '../../models/issue';
 import { TraineeserviceService } from '../../traineeservice.service';
-import { Router, } from '@angular/router';
+
+import { filter,map } from 'rxjs/operators'
+
 @Component({
   selector: 'app-addb',
   templateUrl: './addb.component.html',
   styleUrls: ['./addb.component.css']
 })
+
+
 export class AddbComponent implements OnInit {
   @ViewChild("date",{static:false}) date:ElementRef;
   @ViewChild("course_name_1",{static:false}) course_name_1:ElementRef;
   @ViewChild("type",{static:false}) type:ElementRef;
   @ViewChild("batchname",{static:false}) batchName1:ElementRef;
   @ViewChild("bbname",{static:false}) bbname:ElementRef;
-  result: any;
+result: any;
   public batch: Issue;
   course: Issue[];
-  result1:boolean;
-  constructor(private router: Router,public traineeservice: TraineeserviceService) {
+  
+
+  constructor(public traineeservice: TraineeserviceService) {
     
 
-  } 
+  }
   onSubmit() {
     var d1=new Date();
     this.batch.batchCreatedDate=d1.getFullYear()+"-"+(d1.getMonth()+1)+"-"+d1.getDate();
-    this.traineeservice.saveBatch(this.batch).subscribe(result => this.result, this.result1=this.result);
+    this.traineeservice.saveBatch(this.batch).subscribe(result => this.result);
   }
 
   ngOnInit() {
@@ -44,8 +49,5 @@ export class AddbComponent implements OnInit {
     
     //this.traineeservice.getCourseDetails().pipe(map(na=>na),filter(a=>a.reduce()))
   }
-  gotoadd(){
-    this.router.navigate(['../batch/viewb'])
-  }
+  
 }
-   
