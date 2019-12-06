@@ -16,7 +16,7 @@ export class TraineeserviceService {
     public getSubjectDetails(): Observable<Issue[]> {
       return this.http.get<Issue[]>(this.Url+"/getsubject");
     }
-    
+  
     public save(course: Issue) {
       return this.http.post<Issue>(this.Url+"/insert",course);
     }

@@ -12,7 +12,7 @@ import { Issue } from '../../models/issue';
 export class AddcourseComponent implements OnInit {
   course: Issue;
   result: any;
-  course1: Issue[];
+  course1: Issue[];  
   result1:boolean;
   constructor(private router: Router, private traineeservice: TraineeserviceService) {
     this.course = new Issue();
