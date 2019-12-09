@@ -18,6 +18,10 @@ export class TraineeserviceService {
   public getSubjectDetails(): Observable<Issue[]> {
     return this.http.get<Issue[]>(this.Url + "/getsubject");
   }
+  public getTopicDetails(): Observable<Issue[]> {
+    return this.http.get<Issue[]>(this.Url + "/gettopic");
+  }
+  
   public save(course: Issue) {
     return this.http.post<Issue>(this.Url + "/insert", course);
   }

@@ -10,7 +10,8 @@ import { Router, } from '@angular/router';
 export class AddsubjectComponent implements OnInit {
   result: any;
   public test: any;
-  course: Issue[]
+  course: Issue[];
+  test1:Issue[];
   result1:boolean;
   constructor(private router: Router,public traineeservice: TraineeserviceService) {
     this.test=new Issue();
@@ -26,6 +27,8 @@ export class AddsubjectComponent implements OnInit {
   ngOnInit() {
    
     this.traineeservice.getCourseDetails().subscribe(data => { this.course = data; console.log("Data" + data) })
+    this.traineeservice.getSubjectDetails().subscribe(data => { this.test1 = data });
+  
   }
 
 }

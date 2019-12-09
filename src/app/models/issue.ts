@@ -10,6 +10,13 @@ export class Issue
     batchStatus:string;
     batchCreatedDate:string;
     duration:number;
+     trainerId:string;
+	 trainerName:string;
+	 mobile:number;
+	 mailId:string;
+	 trainerQualification:string;
+     technologyUndertaken:string;
+     trainerPassword:string;
 }
 export class Qualification{
     degree:string;

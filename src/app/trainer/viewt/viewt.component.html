@@ -1,4 +1,3 @@
-<fieldset class="col-sm-3 col-md-8 col-lg-12">
 <fieldset class="col-sm-3 col-md-8">
 <div class="card my-5">
     <div class="card-body">
@@ -13,12 +12,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let courses of course">
-            <td>{{ courses.courseId }}</td>
-            <td>{{ courses.course_name }}</td>
-            <td>{{courses.description}}</td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let trainers of trainer">
+            <td>{{trainers.trainerName }}</td>
+            <td>{{trainers.trainerQualification }}</td>
+            <td>{{trainers.mobile}}</td>
+            <td>{{trainers.mailId}}</td>
+            <td>{{trainers.technologyUndertaken}}</td>
           </tr>
         </tbody>
       </table>
