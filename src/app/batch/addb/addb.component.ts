@@ -20,6 +20,7 @@ export class AddbComponent implements OnInit {
 result: any;
   public batch: Issue;
   course: Issue[];
+  result1: boolean;
   
 
   constructor(public traineeservice: TraineeserviceService) {
@@ -29,7 +30,7 @@ result: any;
   onSubmit() {
     var d1=new Date();
     this.batch.batchCreatedDate=d1.getFullYear()+"-"+(d1.getMonth()+1)+"-"+d1.getDate();
-    this.traineeservice.saveBatch(this.batch).subscribe(result => this.result);
+    this.traineeservice.saveBatch(this.batch).subscribe(result => this.result, this.result1=this.result);
   }
 
   ngOnInit() {

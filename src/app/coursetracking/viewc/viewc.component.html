@@ -3,7 +3,7 @@
   <form (ngSubmit)="onSubmit()">
     <div class="d-flex flex-row">
       <div class="form-group col-md-4">
-          <label>Course Name :</label>
+          <label>Courses Name :</label>
           <select class="form-control" id="cname" [(ngModel)]="test.courseId" name="courseID" #mySelect
           (change)='onOptionsSelected(mySelect.value)'>
               <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
@@ -11,7 +11,7 @@
       </div>
 
       <div class="form-group col-md-4">
-          <label>Subject Name :</label>
+          <label>Subjects Name :</label>
           <select class="form-control" id="sname" [(ngModel)]="test.subjectId" name="subjectId"  >
               <option *ngFor="let sub of getSubject" value="{{sub.subjectId}}">{{sub.subjectName}}</option>
           </select>
@@ -31,8 +31,8 @@
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Course Name</th>
-            <th scope="col">Subject Name</th>
+            <th scope="col">Courses Name</th>
+            <th scope="col">Subjects Name</th>
             <th scope="col">Topics Name</th>
           </tr>
         </thead>
