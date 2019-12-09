@@ -1,21 +1,23 @@
-<fieldset class="col-sm-3 col-md-6 b">
+<fieldset class="col-sm-3 col-md-12 mb-2 b">
     <legend>Assign Students</legend>
     <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label>Batch :</label>
-      <select class="form-control" id="">
+            <div class="col-md-12 d-flex flex-row">
+    <div class="form-group col-xs-12 col-md-4">
+      <label>Batch Name :</label>
+      <select class="form-control" id="assignbatch">
         <option></option>
     </select>
     </div>
-    <div class="form-group">
-      <label>Mobile No :</label>
-      <input class="form-control" id="" placeholder="Mobile no">
+    <div class="form-group col-xs-12 col-md-4">
+      <label>Mobile Number :</label>
+      <input class="form-control" id="studmobileno" placeholder="Mobile no">
     </div>
-    <div class="form-group">
+    <div class="form-group col-xs-12 col-md-4">
         <label>Student Name :</label>
-        <input class="form-control" id="" placeholder="Student Name">
+        <input class="form-control" id="studname" placeholder="Student Name">
     </div>
-    <button class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
+    </div>
+    <button class="btn btn-primary mx-4 my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
     <br>
    
 </form>

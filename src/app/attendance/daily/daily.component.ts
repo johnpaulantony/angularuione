@@ -19,7 +19,6 @@ course:Issue;
 
 
   ngOnInit() {
-    this.traineeservice.getbatch().subscribe(data=>{this.batch1=data});
   }
 
 }

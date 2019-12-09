@@ -1,164 +1,133 @@
 <form (ngSubmit)="onSubmit()">
   <div class="d-lg-flex d-md-flex flex-row">
-      <fieldset class="col-sm-3 col-md-4 ">
+     <fieldset class="col-sm-3 col-md-4 mb-2">
           <legend>Student Details</legend>
           <div class="form-group">
           <label>Student Name :</label>
-          <input type="text" class="form-control" name="sname" id="studname" placeholder="Student Name">
+          <input type="text" class="form-control" [(ngModel)]="student.studentName" name="studentname" placeholder="Student Name">
           </div>
-          <div class="form-group">
+         <div class="form-group">
           <label>Date of Joining :</label>
-          <input type="date" class="form-control" name="sdoj"  id="studdoj" placeholder="Date of Joining">
+          <input type="date" class="form-control" [(ngModel)]="student.dateOfJoining" name="studentdoj" placeholder="Date of Joining">
           </div>
           <div class="form-group">
               <label>Mobile No :</label>
-              <input type="tel" class="form-control" name="smob" id="studmbno" placeholder="Mobile no">
+              <input type="tel" class="form-control" [(ngModel)]="studentpd.studentMobile" name="studentmobile" placeholder="Mobile no">
               </div>
               <div class="form-group">
               <label>Mail Id :</label>
-              <input type="email" class="form-control" name="smid"  id="studmail" placeholder="Mail Id">
+              <input type="email" class="form-control" [(ngModel)]="studentpd.studentEmail" name="studentemail" placeholder="Mail Id">
               </div>
           <div class="form-group">
           <label>Bond :</label><br>
           <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="true">
-              <label class="form-check-label" for="inlineRadio1">Yes</label>
+              <input class="form-check-input" type="radio" value="yes" name="bond" [(ngModel)]="bond">
+              <label class="form-check-label" >Yes</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="false">
-              <label class="form-check-label" for="inlineRadio2">No</label>
+              <input class="form-check-input" type="radio" value="no" name="bond" [(ngModel)]="bond">
+              <label class="form-check-label" >No</label>
             </div></div>
-            <div class="form-group">
+           <div class="form-group">
               <label>Training Duration :</label>
-              <input type="date" class="form-control" id="duration" name="Duration" placeholder="Training Duration">
+              <input type="date" class="form-control" [(ngModel)]="student.duration" name="studenttrainingd" placeholder="Training Duration">
               </div>
               <div class="form-group">
                   <label>Salary Type :</label><br>
                   <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Stipend">
-                      <label class="form-check-label" for="inlineRadio1">Stipend</label>
+                      <input class="form-check-input" type="radio" value="stipend" [(ngModel)]="salary" name="salary">
+                      <label class="form-check-label">Stipend</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="Salary">
-                      <label class="form-check-label" for="inlineRadio2">Salary</label>
-                    </div></div>
-                    
+                      <input class="form-check-input" type="radio" value="salary" [(ngModel)]="salary" name="salary">
+                      <label class="form-check-label">Salary</label>
+                    </div></div>     
       </fieldset>
-  <fieldset class="col-sm-3 col-md-4 ml-1">
+  <fieldset class="col-sm-3 col-md-4 ml-1 mb-2">
     <legend>Amenities</legend>
     <div class="form-group">
-    <label>Student Stay :</label><br>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="DayScholar">
-      <label class="form-check-label" for="inlineRadio1">DayScholar</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="Hostel">
-      <label class="form-check-label" for="inlineRadio2">Hostel</label>
-    </div>
-    </div>
-    <div class="form-group">
-      <label>Student Status :</label><br>
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="In Training">
-          <label class="form-check-label" for="inlineRadio1">In Training</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8" value="Deployed">
-          <label class="form-check-label" for="inlineRadio2">Deployed</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio9" value="Terminated">
-          <label class="form-check-label" for="inlineRadio2">Terminated</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio10" value="Discontinued">
-          <label class="form-check-label" for="inlineRadio2">Discontinued</label>
-        </div></div>
-    <div class="form-group">
-    <label>College :</label>
-    <input type="text" class="form-control" name="college"  id="college" placeholder="Date of Joining">
-    </div>
-    <div class="form-group">
-      <label>Qualification :</label>
-      <select class="form-control"  id="qual" name="Qualification">
-        <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
+      <label>Stay details :</label>
+      <select class="form-control" [(ngModel)]="student.stayDetails" name="stay">
+<option value="hostel">hostel</option>
+<option value="dayscholar">dayscholar</option>
+<option value="cab">cab</option>
       </select>
     </div>
     <div class="form-group">
-      <label>Stream :</label>
-      <select class="form-control" id="stream" name="Stream">
-        <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
+      <label>Status details :</label>
+      <select class="form-control" [(ngModel)]="student.statusDetails" name="stay">
+<option value="in-training">In-Training</option>
+<option value="deployed">deployed</option>
+<option value="terminated">Terminated</option>
+      </select>
+    </div>
+   
+   <div class="form-group">
+    <label>College :</label>
+    <input type="text" class="form-control" [(ngModel)]="ameneties.studentCollege" name="studentcollege" placeholder="College">
+    </div>
+    <div class="form-group">
+      <label>Qualification :</label>
+      <select class="form-control" [(ngModel)]="ameneties.qualification" name="qualification">
+<option value="BE">BE</option>
+<option value="ME">ME</option>
       </select>
     </div>
       <div class="form-group">
         <label>Year of passing :</label>
-        <input type="date" class="form-control" id="yop" name="yop" placeholder="Year of passing">
-        </div>    
+        <input type="text" class="form-control" [(ngModel)]="ameneties.yearOfPassing" name="studentyop" placeholder="Year of passing">
+        </div>
+        <div class="form-group">
+          <label>Stream :</label>
+          <select class="form-control" name="stream" [(ngModel)]="ameneties.stream"  >
+         <option value="EEE">EEE</option>
+           <option value="ECE">ECE</option>
+            
+               </select>
+        </div>
         <div class="form-group">
           <label>Mode of selection :</label>
-          <select class="form-control" id="mode" value="">
-            <option>On Campus</option>
-            <option>Off Campus</option>
-            <option>Reference</option>
+          <select class="form-control" name="mos" [(ngModel)]="student.mode" >            
+            <option value="on-campus">On-Campus</option>
+            <option value="off-campus">Off-Campus</option>
+            <option value="reference">Reference</option>
           </select>
         </div>
   </fieldset>
-  <fieldset class="col-sm-3 col-md-4 ml-1">
-      <legend>Personal Details</legend>
+<fieldset class="col-sm-3 col-md-4 ml-1 mb-2">
+      <legend>Personal details</legend>
       
       <div class="form-group">
           <label>Address :</label>
-          <textarea class="form-control" id="address" name="address"></textarea>
+          <textarea class="form-control" [(ngModel)]="studentpd.studentAddress" name="studentaddress"></textarea>
         </div>
         <div class="form-group">
           <label>Parent's No :</label>
-          <input type="tel" class="form-control" id="studpno" name="spno"  placeholder="Parent's no">
+          <input type="tel" class="form-control" [(ngModel)]="studentpd.parentMobile" name="studentpmobile" placeholder="Parent's no">
           </div>
           <div class="form-group">
               <label>Alternate No :</label>
-              <input type="tel" class="form-control" id="studano"name="sano" placeholder="Alternate no">
+              <input type="tel" class="form-control" [(ngModel)]="studentpd.studentAlternateMobile" name="studentalternateno" placeholder="Alternate no">
               </div>
-              <div class="form-group">
+        <div class="form-group">
                   <label>Date of Birth :</label>
-                  <input type="date" class="form-control" id="dob" name="dob"  placeholder="DOB">
+                  <input type="date" class="form-control" [(ngModel)]="studentpd.dateOfBirth" name="studentdob" placeholder="DOB">
                   </div>
-          <div class="form-group">
-              <label>Gender :</label><br>
-              <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="male">
-                  <label class="form-check-label" for="inlineRadio1">Male</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio12" value="female">
-                  <label class="form-check-label" for="inlineRadio2">Female</label>
-                </div></div>
-                <button class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                  <div class="form-group">
+                    <label>Gender :</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="male" name="gender" [(ngModel)]="gender">
+                        <label class="form-check-label" >Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="female" name="gender" [(ngModel)]="gender">
+                        <label class="form-check-label" >Female</label>
+                      </div></div>
+                <button class="btn btn-primary my-2">Submit</button>
                     <br>
   </fieldset>
-  </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Message</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div *ngIf="result1; then condition1 else condition2"></div>
-          <ng-template #condition1>Success</ng-template>
-          <ng-template #condition2>Failed</ng-template>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
-        </div>
-      </div>
-    </div>
-  </div>
   
+  </div>
   </form>
-  
   
   

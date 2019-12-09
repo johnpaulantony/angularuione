@@ -11,8 +11,3 @@ legend{
 label{
     font-size: 12px;
 }
-table{
-    overflow-y:scroll;
-    height:400px;
-    display:block;
- }
