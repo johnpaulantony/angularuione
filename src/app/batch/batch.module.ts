@@ -5,10 +5,11 @@ import { BatchRoutingModule } from './batch-routing.module';
 import { AddbComponent } from './addb/addb.component';
 import { ViewbComponent } from './viewb/viewb.component';
 import { FormsModule } from '@angular/forms';
+import { AssignstudentComponent } from './assignstudent/assignstudent.component';
 
 
 @NgModule({
-  declarations: [AddbComponent, ViewbComponent],
+  declarations: [AddbComponent, ViewbComponent, AssignstudentComponent],
   imports: [
     CommonModule,
     BatchRoutingModule,
