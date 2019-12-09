@@ -49,6 +49,15 @@ export class TraineeserviceService {
 
     return this.http.post<Amenities>(this.Url + "/insertstudentacademic", amenities);
   }
+  public gettrainer(): Observable<Issue[]> {
+    return this.http.get<Issue[]>(this.Url + "/gettrainer");
+  }
+  public savetrainer(trainer:Issue) {
+
+    return this.http.post<Issue>(this.Url + "/inserttrainers", trainer);
+
+  }
+  
   public savestudent(student: Studentdetails) {
     console.log("Result " + student.statusDetails);
     return this.http.post<Studentdetails>(this.Url + "/insertstudent", student);
