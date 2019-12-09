@@ -3,23 +3,23 @@
       <fieldset class="col-sm-3 col-md-4 ">
           <legend>Student Details</legend>
           <div class="form-group">
-          <label>Student Name</label>
+          <label>Student Name :</label>
           <input type="text" class="form-control" name="sname" id="studname" placeholder="Student Name">
           </div>
           <div class="form-group">
-          <label>Date of Joining</label>
+          <label>Date of Joining :</label>
           <input type="date" class="form-control" name="sdoj"  id="studdoj" placeholder="Date of Joining">
           </div>
           <div class="form-group">
-              <label>Mobile No</label>
+              <label>Mobile No :</label>
               <input type="tel" class="form-control" name="smob" id="studmbno" placeholder="Mobile no">
               </div>
               <div class="form-group">
-              <label>Mail Id</label>
+              <label>Mail Id :</label>
               <input type="email" class="form-control" name="smid"  id="studmail" placeholder="Mail Id">
               </div>
           <div class="form-group">
-          <label>Bond</label><br>
+          <label>Bond :</label><br>
           <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="true">
               <label class="form-check-label" for="inlineRadio1">Yes</label>
@@ -29,11 +29,11 @@
               <label class="form-check-label" for="inlineRadio2">No</label>
             </div></div>
             <div class="form-group">
-              <label>Training Duration</label>
+              <label>Training Duration :</label>
               <input type="date" class="form-control" id="duration" name="Duration" placeholder="Training Duration">
               </div>
               <div class="form-group">
-                  <label>Salary Type</label><br>
+                  <label>Salary Type :</label><br>
                   <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Stipend">
                       <label class="form-check-label" for="inlineRadio1">Stipend</label>
@@ -47,7 +47,7 @@
   <fieldset class="col-sm-3 col-md-4 ml-1">
     <legend>Amenities</legend>
     <div class="form-group">
-    <label>Student Stay</label><br>
+    <label>Student Stay :</label><br>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="DayScholar">
       <label class="form-check-label" for="inlineRadio1">DayScholar</label>
@@ -58,7 +58,7 @@
     </div>
     </div>
     <div class="form-group">
-      <label>Student Status</label><br>
+      <label>Student Status :</label><br>
       <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="In Training">
           <label class="form-check-label" for="inlineRadio1">In Training</label>
@@ -76,27 +76,27 @@
           <label class="form-check-label" for="inlineRadio2">Discontinued</label>
         </div></div>
     <div class="form-group">
-    <label>College</label>
+    <label>College :</label>
     <input type="text" class="form-control" name="college"  id="college" placeholder="Date of Joining">
     </div>
     <div class="form-group">
-      <label>Qualification</label>
+      <label>Qualification :</label>
       <select class="form-control"  id="qual" name="Qualification">
         <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
       </select>
     </div>
     <div class="form-group">
-      <label>Stream</label>
+      <label>Stream :</label>
       <select class="form-control" id="stream" name="Stream">
         <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
       </select>
     </div>
       <div class="form-group">
-        <label>Year of passing</label>
+        <label>Year of passing :</label>
         <input type="date" class="form-control" id="yop" name="yop" placeholder="Year of passing">
         </div>    
         <div class="form-group">
-          <label>Mode of selection</label>
+          <label>Mode of selection :</label>
           <select class="form-control" id="mode" value="">
             <option>On Campus</option>
             <option>Off Campus</option>
@@ -105,26 +105,26 @@
         </div>
   </fieldset>
   <fieldset class="col-sm-3 col-md-4 ml-1">
-      <legend>Student personal details</legend>
+      <legend>Personal Details</legend>
       
       <div class="form-group">
-          <label>Address</label>
+          <label>Address :</label>
           <textarea class="form-control" id="address" name="address"></textarea>
         </div>
         <div class="form-group">
-          <label>Parent's No</label>
+          <label>Parent's No :</label>
           <input type="tel" class="form-control" id="studpno" name="spno"  placeholder="Parent's no">
           </div>
           <div class="form-group">
-              <label>Alternate No</label>
+              <label>Alternate No :</label>
               <input type="tel" class="form-control" id="studano"name="sano" placeholder="Alternate no">
               </div>
               <div class="form-group">
-                  <label>Date of Birth</label>
+                  <label>Date of Birth :</label>
                   <input type="date" class="form-control" id="dob" name="dob"  placeholder="DOB">
                   </div>
           <div class="form-group">
-              <label>Gender</label><br>
+              <label>Gender :</label><br>
               <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="male">
                   <label class="form-check-label" for="inlineRadio1">Male</label>
@@ -133,9 +133,32 @@
                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio12" value="female">
                   <label class="form-check-label" for="inlineRadio2">Female</label>
                 </div></div>
-                <button class="btn btn-primary my-2">Submit</button>
+                <button class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
                     <br>
   </fieldset>
   </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="result1; then condition1 else condition2"></div>
+          <ng-template #condition1>Success</ng-template>
+          <ng-template #condition2>Failed</ng-template>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   </form>
+  
+  
   
