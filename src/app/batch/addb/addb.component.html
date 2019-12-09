@@ -1,33 +1,30 @@
 
 <div class="d-lg-flex d-md-flex flex-row">
-  <fieldset class="col-sm-3 col-md-4 b">
+  <fieldset class="col-sm-3 col-md-6 my-3 b">
         <legend>Batch Selection Details</legend>
         <form (ngSubmit)="onSubmit()">
                 <div class="form-group">
-                        <label>Month and Year of joining</label>
+                        <label>Month and Year of joining :</label>
                         <input type="date" id="btyop" class="form-control" name="cdescription" placeholder="Year of passing"  >
                         </div>
                         <div class="form-group">
-                                <label>Course</label>
-                                <select id="cname">
+                                <label>Course :</label>
+                                <select class="form-control" id="cname">
                                   <option *ngFor="let batch of course" value= {{batch.courseID}}>
                                      {{batch.coursename}}
                                   </option>
                                 </select>
-                                <br/>
-                               Name:{{batch.coursename}}
-      
                               </div>
                               <div class="form-group">
-                                    <label>Type of Student</label>
-                                    <select class="form-control"  id="type" name="stu" [(value)]="select1" >
+                                    <label>Type of Student :</label>
+                                    <select class="form-control" id="type" name="stu" [(value)]="select1" >
                                 
                                      <option value="Upskilling">UpSkilling</option>
                                       <option value="Fresher">Fresher</option>
                                     </select>
                                   </div>
                                   <div class="form-group">
-                                        <label>Batch Name Generation</label>
+                                        <label>Batch Name Generation :</label>
                                         <input type="text" class="form-control" id="btname" >{{select1}}
                                         </div>
                                         <div class="form-group">
@@ -39,20 +36,20 @@
                                                 </select>
                                               </div>
                                               <div class="form-group">
-                                                    <label>Student Status</label>
+                                                    <label>Student Status :</label>
                                                     <select class="form-control" id="exampleFormControlSelect2">
                                                       <option>Finished</option>
                                                       <option>Current</option>
                                                       <option>Upcoming</option>
                                                     </select>
                                                   </div>
-                                                  <button class="btn btn-primary my-2">Submit</button>
+                                                  <button class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
                                                   <br>
                                                 </form>
                                             </fieldset>
                                             </div>
  
-
+ 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -68,8 +65,7 @@
         <ng-template #condition2>Failed</ng-template>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="gotoadd()">Ok</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>

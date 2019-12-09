@@ -36,11 +36,11 @@
       <tr>
       <td>surendran </td>
      <td><div class="form-group">
-        <input type="checkbox" *ngIf="result1; then condition1 else condition2" value="">
+        <input type="checkbox" *ngIf="value; then condition1 else condition2" value="true">
           <ng-template #condition1>Present</ng-template>
           <ng-template #condition2>Absent</ng-template>
     </div>
-</td>
+    </td>
       </tr>
       </tbody>
       </table>

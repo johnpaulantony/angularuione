@@ -11,8 +11,7 @@ export class DashboardComponent implements OnInit {
   constructor()
   {
   this.chartConfig = {
-  width: '700',
-  height: '400',
+  
   type: 'column3d',
   dataFormat: 'json',
   }
