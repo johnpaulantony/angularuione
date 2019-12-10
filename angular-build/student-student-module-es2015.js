@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<p>views works!</p>");
+/* harmony default export */ __webpack_exports__["default"] = ("<fieldset class=\"col-sm-3 col-md-8\">\n    <div class=\"card my-5\">\n        <div class=\"card-body\">\n          <table class=\"table table-bordered table-striped\">\n            <thead class=\"thead-dark\">\n              <tr>\n                <th scope=\"col\">Student Name</th>\n                <th scope=\"col\">Mobile No</th>\n                <th scope=\"col\">Mail Id</th>\n                <th scope=\"col\">Batch</th>\n                <th scope=\"col\">Date Of Joining</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr *ngFor=\"let trainers of trainer\">\n                <td>{{trainers.trainerName }}</td>\n                <td>{{trainers.trainerQualification }}</td>\n                <td>{{trainers.mobile}}</td>\n                <td>{{trainers.mailId}}</td>\n                <td>{{trainers.technologyUndertaken}}</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </fieldset>\n    \n");
 
 /***/ }),
 

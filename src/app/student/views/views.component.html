@@ -1,2 +1,27 @@
-
-<p>views works!</p>
+<fieldset class="col-sm-3 col-md-8">
+    <div class="card my-5">
+        <div class="card-body">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Student Name</th>
+                <th scope="col">Mobile No</th>
+                <th scope="col">Mail Id</th>
+                <th scope="col">Batch</th>
+                <th scope="col">Date Of Joining</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let trainers of trainer">
+                <td>{{trainers.trainerName }}</td>
+                <td>{{trainers.trainerQualification }}</td>
+                <td>{{trainers.mobile}}</td>
+                <td>{{trainers.mailId}}</td>
+                <td>{{trainers.technologyUndertaken}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </fieldset>
+    
