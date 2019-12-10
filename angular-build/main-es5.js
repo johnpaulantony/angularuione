@@ -749,7 +749,7 @@
           \***************************/
         /*! no static exports found */
         /***/ (function (module, exports, __webpack_require__) {
-            module.exports = __webpack_require__(/*! /home/sys-user/angularui/src/main.ts */ "./src/main.ts");
+            module.exports = __webpack_require__(/*! /home/sys-user/angularui/angularui/src/main.ts */ "./src/main.ts");
             /***/ 
         })
     }, [[0, "runtime", "vendor"]]]);

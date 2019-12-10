@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<fieldset class=\"col-md-12 b\">\n    <legend>Attendance</legend>\n    <form (ngSubmit)=\"onSubmit()\">\n            <div class=\"d-flex flex-row\">\n    <div class=\"form-group col-xs-2 col-md-4\">\n    <label>Date:</label>\n    <input type=\"date\" class=\"form-control\" name=\"date\" >\n    </div> \n    <div class=\"form-group col-md-4\">\n        <label>Batch:</label>\n        <select class=\"form-control\" name=\"batch\" placeholder=\"Batch\" >\n        <option *ngFor=\"let sub of batch1\" value=\"{{sub.batchId}}\" >{{sub.batchName}}</option>\n        </select>\n        </div>\n        <div class=\"form-group col-md-4\">\n        <label>Session:</label>\n        <select class=\"form-control\" name=\"session\" placeholder=\"Session\">\n        <option>Forenoon</option>\n        <option>Afternoon</option>\n    </select>\n</div></div></form>\n</fieldset>\n\n\n<fieldset class=\"col-md-12\">\n    <div class=\"card my-5\"> \n      <div class=\"card-body\">\n      <table class=\"table table-bordered table-striped\">\n      <thead class=\"thead-dark\">\n      <tr>\n      <th scope=\"col\">Student</th>\n      <th scope=\"col\">Present/Absent</th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr>\n      <td>karthi</td>\n     <td><div class=\"form-group\">\n        <input type=\"checkbox\"  value=\"true\">\n        <!--*ngIf=\"value; then condition1 else condition2\"\n          <ng-template #condition1>Present</ng-template>\n          <ng-template #condition2>Absent</ng-template>-->\n    </div>\n    </td>\n      </tr>\n      </tbody>\n      </table>\n      </div>\n      </div>\n      </fieldset>\n     \n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<fieldset class=\"col-md-12 b\">\n    <legend>Attendance</legend>\n    <form (ngSubmit)=\"onSubmit()\">\n            <div class=\"d-flex flex-row\">\n    <div class=\"form-group col-xs-2 col-md-4\">\n    <label>Date:</label>\n    <input type=\"date\" class=\"form-control\" name=\"date\" >\n    </div> \n    <div class=\"form-group col-md-4\">\n        <label>Batch:</label>\n        <select class=\"form-control\" name=\"batch\" placeholder=\"Batch\" >\n        <option *ngFor=\"let sub of batch1\" value=\"{{sub.batchId}}\" >{{sub.batchName}}</option>\n        </select>\n        </div>\n        <div class=\"form-group col-md-4\">\n        <label>Session:</label>\n        <select class=\"form-control\" name=\"session\" placeholder=\"Session\">\n        <option>Forenoon</option>\n        <option>Afternoon</option>\n    </select>\n</div></div></form>\n</fieldset>\n\n\n<fieldset class=\"col-md-12\">\n    <div class=\"card my-5\"> \n      <div class=\"card-body\">\n      <table class=\"table table-bordered table-striped\">\n      <thead class=\"thead-dark\">\n      <tr>\n      <th scope=\"col\">Student</th>\n      <th scope=\"col\">Present/Absent</th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr>\n      <td>karthi</td>\n     <td> <input type=\"checkbox\"  \n        (change)='onchange($event)'>\n        <!--*ngIf=\"value; then condition1 else condition2\"\n          <ng-template #condition1>Present</ng-template>\n          <ng-template #condition2>Absent</ng-template>-->\n    </div>\n    </td>\n      </tr>\n      </tbody>\n      </table>\n      </div>\n      </div>\n      </fieldset>\n     \n\n");
 
 /***/ }),
 
@@ -127,6 +127,10 @@ let DailyComponent = class DailyComponent {
         this.router = router;
         this.traineeservice = traineeservice;
         this.test = new _models_issue__WEBPACK_IMPORTED_MODULE_2__["Issue"]();
+    }
+    onchange(value) {
+        this.present = value.target.checked;
+        console.log(this.present);
     }
     ngOnInit() {
     }

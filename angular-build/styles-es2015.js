@@ -566,13 +566,13 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/sys-user/angularui/node_modules/@angular/material/prebuilt-themes/indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
-__webpack_require__(/*! /home/sys-user/angularui/src/styles.css */"./src/styles.css");
-__webpack_require__(/*! /home/sys-user/angularui/node_modules/bootstrap/dist/css/bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
-__webpack_require__(/*! /home/sys-user/angularui/src/AdminLTE.css */"./src/AdminLTE.css");
-__webpack_require__(/*! /home/sys-user/angularui/src/AdminLTE.min.css */"./src/AdminLTE.min.css");
-__webpack_require__(/*! /home/sys-user/angularui/src/_all-skins.min.css */"./src/_all-skins.min.css");
-module.exports = __webpack_require__(/*! /home/sys-user/angularui/node_modules/font-awesome/css/font-awesome.css */"./node_modules/font-awesome/css/font-awesome.css");
+__webpack_require__(/*! /home/sys-user/angularui/angularui/node_modules/@angular/material/prebuilt-themes/indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
+__webpack_require__(/*! /home/sys-user/angularui/angularui/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! /home/sys-user/angularui/angularui/node_modules/bootstrap/dist/css/bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! /home/sys-user/angularui/angularui/src/AdminLTE.css */"./src/AdminLTE.css");
+__webpack_require__(/*! /home/sys-user/angularui/angularui/src/AdminLTE.min.css */"./src/AdminLTE.min.css");
+__webpack_require__(/*! /home/sys-user/angularui/angularui/src/_all-skins.min.css */"./src/_all-skins.min.css");
+module.exports = __webpack_require__(/*! /home/sys-user/angularui/angularui/node_modules/font-awesome/css/font-awesome.css */"./node_modules/font-awesome/css/font-awesome.css");
 
 
 /***/ })

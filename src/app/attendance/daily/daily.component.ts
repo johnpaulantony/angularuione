@@ -13,10 +13,15 @@ batch1:Issue[]
 test:Issue;
 result:any;
 course:Issue;
+present:boolean;
   constructor(private router: Router,public traineeservice: TraineeserviceService) { 
     this.test=new Issue()
   }
-
+  onchange(value){
+    this.present=value.target.checked
+    console.log(this.present)
+  }
+  
 
   ngOnInit() {
   }
