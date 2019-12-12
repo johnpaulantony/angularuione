@@ -4,19 +4,19 @@
           <legend>Student Details</legend>
           <div class="form-group">
           <label>Student Name :</label>
-          <input type="text" class="form-control" [(ngModel)]="student.studentName" name="studentname" placeholder="Student Name">
+          <input type="text" class="form-control" [(ngModel)]="student.studentName" id="studentname" name="studentname" placeholder="Student Name">
           </div>
          <div class="form-group">
           <label>Date of Joining :</label>
-          <input type="date" class="form-control" [(ngModel)]="student.dateOfJoining" name="studentdoj" placeholder="Date of Joining">
+          <input type="date" class="form-control" [(ngModel)]="student.dateOfJoining" id="doj" name="studentdoj" placeholder="Date of Joining">
           </div>
           <div class="form-group">
               <label>Mobile No :</label>
-              <input type="tel" class="form-control" [(ngModel)]="studentpd.studentMobile" name="studentmobile" placeholder="Mobile no">
+              <input type="tel" class="form-control" [(ngModel)]="studentpd.studentMobile" id="mobile" name="studentmobile" placeholder="Mobile no">
               </div>
               <div class="form-group">
               <label>Mail Id :</label>
-              <input type="email" class="form-control" [(ngModel)]="studentpd.studentEmail" name="studentemail" placeholder="Mail Id">
+              <input type="email" class="form-control" [(ngModel)]="studentpd.studentEmail" id="mail" name="studentemail" placeholder="Mail Id">
               </div>
           <div class="form-group">
           <label>Bond :</label><br>
@@ -30,7 +30,7 @@
             </div></div>
            <div class="form-group">
               <label>Training Duration :</label>
-              <input type="date" class="form-control" [(ngModel)]="student.duration" name="studenttrainingd" placeholder="Training Duration">
+              <input type="date" class="form-control" [(ngModel)]="student.duration" id="trdr" name="studenttrainingd" placeholder="Training Duration">
               </div>
               <div class="form-group">
                   <label>Salary Type :</label><br>
@@ -47,7 +47,7 @@
     <legend>Amenities</legend>
     <div class="form-group">
       <label>Stay details :</label>
-      <select class="form-control" [(ngModel)]="student.stayDetails" name="stay">
+      <select class="form-control" [(ngModel)]="student.stayDetails" id="stay" name="stay">
 <option value="hostel">hostel</option>
 <option value="dayscholar">dayscholar</option>
 <option value="cab">cab</option>
@@ -55,7 +55,7 @@
     </div>
     <div class="form-group">
       <label>Status details :</label>
-      <select class="form-control" [(ngModel)]="student.statusDetails" name="stay">
+      <select class="form-control" [(ngModel)]="student.statusDetails" id="status" name="stay">
 <option value="in-training">In-Training</option>
 <option value="deployed">deployed</option>
 <option value="terminated">Terminated</option>
@@ -64,22 +64,22 @@
    
    <div class="form-group">
     <label>College :</label>
-    <input type="text" class="form-control" [(ngModel)]="ameneties.studentCollege" name="studentcollege" placeholder="College">
+    <input type="text" class="form-control" [(ngModel)]="ameneties.studentCollege" id="college" name="studentcollege" placeholder="College">
     </div>
     <div class="form-group">
       <label>Qualification :</label>
-      <select class="form-control" [(ngModel)]="ameneties.qualification" name="qualification">
+      <select class="form-control" [(ngModel)]="ameneties.qualification" id="qualification" name="qualification">
 <option value="BE">BE</option>
 <option value="ME">ME</option>
       </select>
     </div>
       <div class="form-group">
         <label>Year of passing :</label>
-        <input type="text" class="form-control" [(ngModel)]="ameneties.yearOfPassing" name="studentyop" placeholder="Year of passing">
+        <input type="text" class="form-control" [(ngModel)]="ameneties.yearOfPassing" id="yop" name="studentyop" placeholder="Year of passing">
         </div>
         <div class="form-group">
           <label>Stream :</label>
-          <select class="form-control" name="stream" [(ngModel)]="ameneties.stream"  >
+          <select class="form-control" id="stream" name="stream" [(ngModel)]="ameneties.stream"  >
          <option value="EEE">EEE</option>
            <option value="ECE">ECE</option>
             
@@ -87,7 +87,7 @@
         </div>
         <div class="form-group">
           <label>Mode of selection :</label>
-          <select class="form-control" name="mos" [(ngModel)]="student.mode" >            
+          <select class="form-control" id="mos" name="mos" [(ngModel)]="student.mode" >            
             <option value="on-campus">On-Campus</option>
             <option value="off-campus">Off-Campus</option>
             <option value="reference">Reference</option>
@@ -99,19 +99,19 @@
       
       <div class="form-group">
           <label>Address :</label>
-          <textarea class="form-control" [(ngModel)]="studentpd.studentAddress" name="studentaddress"></textarea>
+          <textarea class="form-control" [(ngModel)]="studentpd.studentAddress" id="address" name="studentaddress"></textarea>
         </div>
         <div class="form-group">
           <label>Parent's No :</label>
-          <input type="tel" class="form-control" [(ngModel)]="studentpd.parentMobile" id="mobile" name="studentpmobile" placeholder="Parent's no">
+          <input type="tel" class="form-control" [(ngModel)]="studentpd.parentMobile" id="parentsmobile" name="studentpmobile" placeholder="Parent's no">
           </div>
           <div class="form-group">
               <label>Alternate No :</label>
-              <input type="tel" class="form-control" [(ngModel)]="studentpd.studentAlternateMobile" name="studentalternateno" placeholder="Alternate no">
+              <input type="tel" class="form-control" [(ngModel)]="studentpd.studentAlternateMobile" id="alternatemobile" name="studentalternateno" placeholder="Alternate no">
               </div>
         <div class="form-group">
                   <label>Date of Birth :</label>
-                  <input type="date" class="form-control" [(ngModel)]="studentpd.dateOfBirth" name="studentdob" placeholder="DOB">
+                  <input type="date" class="form-control" [(ngModel)]="studentpd.dateOfBirth" id="dob" name="studentdob" placeholder="DOB">
                   </div>
                   <div class="form-group">
                     <label>Gender :</label><br>
