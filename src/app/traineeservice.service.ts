@@ -10,7 +10,7 @@ import { Studentdetails } from './models/StudentDetails';
 export class TraineeserviceService {
   private Url: string;
   constructor(private http: HttpClient) {
-    this.Url = 'https://smitraining2020.herokuapp.com /smi';
+    this.Url = 'http://smitraining2020.herokuapp.com/smi';
   }
   public getCourseDetails(): Observable<Issue[]> {
     return this.http.get<Issue[]>(this.Url + "/get");
