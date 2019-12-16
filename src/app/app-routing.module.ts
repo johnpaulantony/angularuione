@@ -3,9 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { TopnavComponent } from './topnav/topnav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OtherformsComponent } from './otherforms/otherforms.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
+  {
+    path:'',
+    component:LoginComponent
+      },
+      {
+    path:'login',
+    component:LoginComponent
+      },
   {
 path:'otherforms',
 component:OtherformsComponent
