@@ -34,6 +34,8 @@
                  <ul class="submenu"><li>
                  <a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i><span class="sp">Daily</span></a> 
                  </li>
+                 <li> <a id="topiccover" routerLink="/attendance/topiccov"><i class="fa fa-circle-o"></i><span class="sp">Topics Covered</span></a> 
+                 </li>
                 </ul> 
                 </div>
               </div></div>
@@ -120,26 +122,26 @@
     
     <div class="content-wrapper">
      <section class="content-header">
-<div class="card my-5">
-  <div class="card-body">
-  <table class="table table-bordered table-striped">
-  <thead class="thead-dark">
-  <tr>
-  <th scope="col">Batch Name</th>
-  <th scope="col">Course Name</th>
-  <th scope="col">Batch Created Date</th>
-  <th scope="col">No of Students</th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <tr *ngFor="let courses of course1">
-  <td></td>
-  <td></td>
-  </tr>
-  </tbody>
-  </table>
-  </div>
-  </div>
+        <div class="card my-5">
+            <div class="card-body">
+              <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+            <tr>
+            <th scope="col">Batch Name</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Batch Created Date</th>
+            <th scope="col">No of Students</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let courses of course1">
+            <td></td>
+            <td></td>
+            </tr>
+            </tbody>
+            </table></div>
+            </div>
+            </div>          
 </section> 
 </div> </div>

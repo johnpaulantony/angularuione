@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { AttendanceRoutingModule } from './attendance-routing.module';
 import { DailyComponent } from './daily/daily.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TopicscoveredComponent } from './topicscovered/topicscovered.component';
 
 
 @NgModule({
-  declarations: [DailyComponent],
+  declarations: [DailyComponent, TopicscoveredComponent],
   imports: [
     CommonModule,
     AttendanceRoutingModule,

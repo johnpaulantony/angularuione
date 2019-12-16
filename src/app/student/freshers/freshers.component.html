@@ -34,6 +34,8 @@
                <ul class="submenu"><li>
                <a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i><span class="sp">Daily</span></a> 
                </li>
+               <li> <a id="topiccover" routerLink="/attendance/topiccov"><i class="fa fa-circle-o"></i><span class="sp">Topics Covered</span></a> 
+               </li>
               </ul> 
               </div>
             </div></div>
@@ -121,9 +123,11 @@
   <div class="content-wrapper">
    <section class="content-header">
 <form (ngSubmit)="onSubmit()">
-  <div class="d-lg-flex d-md-flex flex-row">
+    <div class="card">
+      <div class="card-body">
+          <div class="d-lg-flex d-md-flex flex-row">
      <fieldset class="col-sm-3 col-md-4 mb-2">
-          <legend>Student Details</legend>
+          <legend><b>Student Details</b></legend>
           <div class="form-group">
           <label>Student Name :</label>
           <input type="text" class="form-control" [(ngModel)]="student.studentName" id="studentname" name="studentname" placeholder="Student Name">
@@ -166,7 +170,7 @@
                     </div></div>     
       </fieldset>
   <fieldset class="col-sm-3 col-md-4 ml-1 mb-2">
-    <legend>Amenities</legend>
+    <legend><b>Amenities</b></legend>
     <div class="form-group">
       <label>Stay details :</label>
       <select class="form-control" [(ngModel)]="student.stayDetails" id="stay" name="stay">
@@ -217,7 +221,7 @@
         </div>
   </fieldset>
 <fieldset class="col-sm-3 col-md-4 ml-1 mb-2">
-      <legend>Personal details</legend>
+      <legend><b>Personal details</b></legend>
       
       <div class="form-group">
           <label>Address :</label>
@@ -248,7 +252,7 @@
                 <button class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModal">Submit</button>
                     <br>
   </fieldset>
-  
+  </div></div>
   </div>
   </form>
   

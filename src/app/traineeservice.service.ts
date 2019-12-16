@@ -19,6 +19,7 @@ export class TraineeserviceService {
     return this.http.get<Issue[]>(this.Url + "/getsubject");
   }
   public getTopicDetails(): Observable<Issue[]> {
+   
     return this.http.get<Issue[]>(this.Url + "/gettopic");
   }
   
@@ -34,8 +35,18 @@ export class TraineeserviceService {
 
   }
   public getCourseSubject(course: String): Observable<Issue[]> {
+    console.log('courseId'+course);
     return this.http.get<Issue[]>(this.Url + "/getsubjectoncourse?courseId=" + course);
   }
+  public getassigned(course: String): Observable<Studentdetails[]> {
+  
+    return this.http.get<Studentdetails[]>(this.Url + "/getstudentnameandmobile?batchId=" + course);
+  }
+  public getSubjectTopic(course: String): Observable<Issue[]> {
+    console.log('subjectId'+course);
+    return this.http.get<Issue[]>(this.Url + "/gettopiconsubject?subjectId=" + course);
+  }
+  
   public saveBatch(course: Issue) {
     console.log(course.batchName)
     return this.http.post<Issue>(this.Url + "/insertbatch", course);
@@ -53,9 +64,24 @@ export class TraineeserviceService {
 
     return this.http.post<Amenities>(this.Url + "/insertstudentacademic", amenities);
   }
+  public saveassign(assign: Studentdetails) {
+
+    return this.http.post<Studentdetails>(this.Url + "/insertbatchmapping", assign);
+  }
   public gettrainer(): Observable<Issue[]> {
     return this.http.get<Issue[]>(this.Url + "/gettrainer");
   }
+  public getbatch(): Observable<Issue[]> {
+    return this.http.get<Issue[]>(this.Url + "/getbatch");
+  }
+  public getMobile(mobile:string): Observable<Studentdetails[]> {
+    return this.http.get<Studentdetails[]>(this.Url + "/getname?mobile="+mobile);
+  }
+  
+
+  /*public getMobile(mobile:string): Observable<Studentdetails[]> {
+    return this.http.get<Studentdetails[]>(this.Url + "/getname?mobile="+mobile);
+  }*/
   public savetrainer(trainer:Issue) {
 
     return this.http.post<Issue>(this.Url + "/inserttrainers", trainer);
@@ -69,6 +95,16 @@ export class TraineeserviceService {
   public savestudentpd(studentpd: Studentpersonaldetails) {
 
     return this.http.post<Studentpersonaldetails>(this.Url + "/insertstudentpersonal", studentpd);
+
+  }
+  public saveattend(studentad: Studentdetails) {
+
+    return this.http.post<Studentdetails>(this.Url + "/insertattendance", studentad);
+
+  }
+  public saveTopicCov(studtop: Issue) {
+
+    return this.http.post<Issue>(this.Url + "/insertdailystatus", studtop);
 
   }
   
@@ -89,7 +125,6 @@ export class TraineeserviceService {
   public getStream() {
     return this.http.get<Amenities[]>(this.Url + "/getstudentstream");
   }*/
-
 
 
 }

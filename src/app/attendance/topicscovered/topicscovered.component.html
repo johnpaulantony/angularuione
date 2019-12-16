@@ -35,7 +35,7 @@
                      <a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i><span class="sp">Daily</span></a> 
                      </li>
                      <li> <a id="topiccover" routerLink="/attendance/topiccov"><i class="fa fa-circle-o"></i><span class="sp">Topics Covered</span></a> 
-                     </li>
+                </li>
                     </ul> 
                     </div>
                   </div></div>
@@ -120,51 +120,49 @@
           </section>
         </aside>
         
- <div class="content-wrapper">
-  <section class="content-header">
-      <div class="card col-md-12 col-lg-6">
-          <div class="card-body">
-     <fieldset class="col-sm-3 col-md-12 mb-2 b">
-       <legend><b>Assign Students</b></legend>
-     <form (ngSubmit)="onSubmit()">
-           <div class="d-lg-flex d-md-flex flex-lg-row flex-sm-column">
-           <div class="form-group mx-3">
-              <label>Batch Names:</label>
-                <select class="form-control" id="bname" [(ngModel)]="sub1.batchId" name="batchId" #mySelect (change)='onOptionsSelected(mySelect.value)'>                        
-                      <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
-                       </select>
-                 </div>
-                <div class="form-group mx-3">
-                  <label>Mobile Number :</label>
-                  <input class="form-control" list="json-datalist" name="mbn" [(ngModel)]="sub1.studentId" autocomplete="off" #mbno id="studmobileno" (keyup)="search($event)" placeholder="Mobile no">
-                  <datalist id="json-datalist" >
-                      <option value=" {{sub.studentName}}/{{sub.studentId}}"  *ngFor="let sub of assign1">{{mbno.value}}</option>
-                  </datalist>  
-                </div>
-                </div>   
-<button class="btn btn-primary mx-3 my-2" id="addassignstudents" data-toggle="modal" data-target="#exampleModal">Add</button>   
-            </form>
-            </fieldset></div></div>
-            <fieldset class="col-sm-3 col-md-12 col-lg-6">
-                    <div class="card my-5">
-                            <div class="card-body">
-                              <div class="table-responsive">
-                            <table class="table table-bordered table-striped">
-                            <thead class="thead-dark">
-                            <tr>
-                            <th scope="col">Student Name</th>
-                            <th scope="col">Student Mobile Number</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr *ngFor="let sub2 of getassign">
-                            <td>{{sub2.studentName}}</td>
-                            <td>{{sub2.studentMobile}}</td>
-                            </tr>
-                            </tbody>
-                            </table></div>
-                            </div>
-                            </div>
-                           </fieldset>
-</section> 
-</div> </div>
+        <div class="content-wrapper">
+         <section class="content-header">
+<fieldset class="col-md-12 b">
+        <legend>Attendance</legend>
+        <form (ngSubmit)="onSubmit()">
+                <div class="col-md-12 d-flex flex-row">
+                        <div class="form-group col-xs-2 col-md-4">
+                                <label>Date:</label>
+                                <input type="date" id="todaydate" class="form-control" [(ngModel)]="abcd.date" name="date" >
+                                </div>
+                                <div class="form-group">
+                                    <label>Batch Name :</label>
+                                    <select class="form-control" id="bname" [(ngModel)]="abcd.batchId" name="batchId" #mySelect (change)='onOptionsSelected(mySelect.value)'>                        
+                                        <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
+                        
+                                    </select>
+                                  </div>
+</div>
+                              <div class="form-group">
+                                    <label>Course Name :</label>
+                                    <select class="form-control" id="cname" [(ngModel)]="abcd.courseId" name="courseID" #mySelect
+                                    (change)='onOptionsSelected2(mySelect.value)'>
+                                        <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
+                              
+                                    </select>
+                                </div>
+                              
+                                <div class="form-group">
+                                    <label>Subject Name :</label>
+                                    <select class="form-control" id="sname" [(ngModel)]="abcd.subjectId" name="subjectId"  #mySelect1
+                                    (change)='onOptionsSelected1(mySelect1.value)' >
+                                        <option *ngFor="let sub of getSubject" value="{{sub.subjectId}}">{{sub.subjectName}}</option>
+                              
+                                    </select>
+                                </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Topics name :</label>
+                                        <select class="form-control" id="tname" [(ngModel)]="abcd.topicId" name="topicId"  >
+                                          <option *ngFor="let sub of gettopic" value="{{sub.topicId}}">{{sub.topicName}}</option>
+                                      </select>
+                                          </div>
+                                  
+                <button class="btn btn-primary mx-4 my-2" id="addtopiccover" >Add</button>
+            </form></fieldset>
+        </section> 
+    </div> </div>
