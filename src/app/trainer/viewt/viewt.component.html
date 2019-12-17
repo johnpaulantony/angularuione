@@ -54,7 +54,9 @@
                <a routerLink="/batch/addb" id="batchadd"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
                </li>
               <li><a routerLink="/batch/assignstudent" id="batchassign"><i class="fa fa-circle-o"></i><span class="sp">Assign Student</span></a></li>
-              <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
+              <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li>
+              <li><a routerLink="/batch/studentupdation" id="studentupdation"><i class="fa fa-circle-o"></i><span class="sp">Student Updation</span></a></li>
+            </ul> 
               </div>
             </div></div>
         </li>
@@ -125,6 +127,7 @@
 <fieldset class="col-sm-3 col-md-8">
 <div class="card my-5">
     <div class="card-body">
+      <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
           <tr>
@@ -144,7 +147,7 @@
             <td>{{trainers.technologyUndertaken}}</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
   </div>
 </fieldset>

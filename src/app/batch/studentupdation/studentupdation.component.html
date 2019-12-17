@@ -35,7 +35,7 @@
                      <a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i><span class="sp">Daily</span></a> 
                      </li>
                      <li> <a id="topiccover" routerLink="/attendance/topiccov"><i class="fa fa-circle-o"></i><span class="sp">Topics Covered</span></a> 
-                     </li>
+                </li>
                     </ul> 
                     </div>
                   </div></div>
@@ -122,51 +122,49 @@
           </section>
         </aside>
         
- <div class="content-wrapper">
-  <section class="content-header">
-      <div class="card col-md-12 col-lg-6">
-          <div class="card-body">
-     <fieldset class="col-sm-3 col-md-12 mb-2 b">
-       <legend><b>Assign Students</b></legend>
-     <form (ngSubmit)="onSubmit()">
-           <div class="d-lg-flex d-md-flex flex-lg-row flex-sm-column">
-           <div class="form-group mx-3">
-              <label>Batch Names:</label>
-                <select class="form-control" id="bname" [(ngModel)]="sub1.batchId" name="batchId" #mySelect (change)='onOptionsSelected(mySelect.value)'>                        
-                      <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
-                       </select>
-                 </div>
-                <div class="form-group mx-3">
-                  <label>Mobile Number :</label>
-                  <input class="form-control" list="json-datalist" name="mbn" [(ngModel)]="sub1.studentId" autocomplete="off" #mbno id="studmobileno" (keyup)="search($event)" placeholder="Mobile no">
-                  <datalist id="json-datalist" >
-                      <option value=" {{sub.studentName}}/{{sub.studentId}}"  *ngFor="let sub of assign1">{{mbno.value}}</option>
-                  </datalist>  
-                </div>
-                </div>   
-<button class="btn btn-primary mx-3 my-2" id="addassignstudents" data-toggle="modal" data-target="#exampleModal">Add</button>   
-            </form>
-            </fieldset></div></div>
-            <fieldset class="col-sm-3 col-md-12 col-lg-6">
-                    <div class="card my-5">
-                            <div class="card-body">
-                              <div class="table-responsive">
-                            <table class="table table-bordered table-striped">
-                            <thead class="thead-dark">
-                            <tr>
-                            <th scope="col">Student Name</th>
-                            <th scope="col">Student Mobile Number</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr *ngFor="let sub2 of getassign">
-                            <td>{{sub2.studentName}}</td>
-                            <td>{{sub2.studentMobile}}</td>
-                            </tr>
-                            </tbody>
-                            </table></div>
-                            </div>
-                            </div>
-                           </fieldset>
-</section> 
-</div> </div>
+        <div class="content-wrapper">
+         <section class="content-header">
+                <div class="card col-lg-6 col-md-12">
+                        <div class="card-body">
+                 <fieldset class="col-sm-3 col-md-12 col-lg-12 b">
+                     <legend><b>Student Updation</b></legend>
+                     <form (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Batch :</label>
+                              <select class="form-control" id="batch" name="batch">                        
+                                    <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
+                                     </select>
+                               </div>
+          <div class="form-group">
+             <label>Student Name :</label>
+      <select class="form-control" id="studentname" name="studnetname">                        
+          <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
+             </select>
+            </div>
+   <div class="form-group"> 
+     <label>Date :</label>
+                <input type="date" class="form-control"
+            id="date" name="date" #date placeholder="Date">
+             </div>
+            <div class="form-group">
+               <label>Student Status :</label>
+        <select class="form-control" id="studentstatus" name="studnetstatus">                        
+            <option value="in-training">In-Training</option>
+            <option value="deployed">Deployed</option>
+            <option value="terminated">Terminated</option>
+            <option value="discontinued">Discontinued</option>
+               </select>
+              </div>
+              <div class="form-group">
+                <label>Reason :</label>
+                <textarea  class="form-control" id="reason"></textarea>
+              </div>
+                     <button class="btn btn-primary my-2" id="submitstudnetupdation" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                     <br>
+                 </form>
+                 </fieldset></div></div>
+                 
+          </section> 
+      </div> </div>
+      
+    

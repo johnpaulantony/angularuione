@@ -54,7 +54,9 @@
                <a routerLink="/batch/addb" id="batchadd"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
                </li>
               <li><a routerLink="/batch/assignstudent" id="batchassign"><i class="fa fa-circle-o"></i><span class="sp">Assign Student</span></a></li>
-              <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
+              <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li>
+              <li><a routerLink="/batch/studentupdation" id="studentupdation"><i class="fa fa-circle-o"></i><span class="sp">Student Updation</span></a></li>
+            </ul> 
               </div>
             </div></div>
         </li>
@@ -122,8 +124,10 @@
   
   <div class="content-wrapper">
    <section class="content-header">
-<fieldset class="col-sm-3 col-md-6">
-  <legend>Trainer Information</legend>
+      <div class="card col-lg-6 col-md-12">
+          <div class="card-body">
+   <fieldset class="col-sm-3 col-md-12 col-lg-12 b">
+  <legend><b>Trainer Information</b></legend>
   <form (ngSubmit)="onSubmit()">
   <div class="form-group">
   <label>Trainer Name :</label>
@@ -157,7 +161,7 @@
   <button class="btn btn-primary my-2" id="submittrainer" data-toggle="modal" data-target="#exampleModal">Submit</button>
   <br>
   </form>
-  </fieldset>
+  </fieldset></div></div>
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
