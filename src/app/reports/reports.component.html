@@ -3,7 +3,7 @@
       <a href="#" class="logo">
       <span class="logo-mini">SMI</span>
         <span class="logo-lg"><b>SMI</b>Innothink</span>
-      </a>
+      </a> 
       <nav class="navbar navbar-static-top">
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
           <span class="sr-only">Toggle navigation</span>
@@ -19,7 +19,7 @@
 
     <aside class="main-sidebar">
       <section class="sidebar">
-      <ul class="sidebar-menu accordion" data-widget="tree">
+        <ul class="sidebar-menu accordion" data-widget="tree">
           <li class="header">Main Navigation</li>
           <li class="treeview" >
             <a id="attendance" data-toggle="collapse" 
@@ -34,6 +34,8 @@
                  <ul class="submenu"><li>
                  <a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i><span class="sp">Daily</span></a> 
                  </li>
+                 <li> <a id="topiccover" routerLink="/attendance/topiccov"><i class="fa fa-circle-o"></i><span class="sp">Topics Covered</span></a> 
+            </li>
                 </ul> 
                 </div>
               </div></div>
@@ -52,7 +54,10 @@
                  <a routerLink="/batch/addb" id="batchadd"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
                  </li>
                 <li><a routerLink="/batch/assignstudent" id="batchassign"><i class="fa fa-circle-o"></i><span class="sp">Assign Student</span></a></li>
-                <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
+                <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li>
+                <li><a routerLink="/batch/studentupdation" id="studentupdation"><i class="fa fa-circle-o"></i><span class="sp">Student Updation</span></a></li>
+                <li><a routerLink="/batch/batchupdation" id="batchupdation"><i class="fa fa-circle-o"></i><span class="sp">Batch Updation</span></a></li>
+              </ul> 
                 </div>
               </div></div>
           </li>
@@ -109,11 +114,11 @@
               </div></div>
           </li>
           <li class="treeview" >
-            <a id="reports" routerLink="/reports">
-              <i class="fa fa-file-text-o"></i>
-             <span>Reports</span> 
-            </a>
-          </li>
+              <a id="reports" routerLink="/reports/reports">
+                <i class="fa fa-file-text-o"></i>
+               <span>Reports </span> 
+              </a>
+            </li>
           <li class="treeview" >
             <a id="otherforms" routerLink="/otherforms">
               <i class="fa fa-file-text-o"></i>
