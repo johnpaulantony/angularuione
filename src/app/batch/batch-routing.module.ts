@@ -4,6 +4,7 @@ import { AddbComponent } from './addb/addb.component';
 import { ViewbComponent } from './viewb/viewb.component';
 import { AssignstudentComponent } from './assignstudent/assignstudent.component';
 import { StudentupdationComponent } from './studentupdation/studentupdation.component';
+import { BatchupdationComponent } from './batchupdation/batchupdation.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'studentupdation',
     component:StudentupdationComponent
+  },
+  {
+    path:'batchupdation',
+    component:BatchupdationComponent
   }
 ];
 

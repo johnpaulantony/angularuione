@@ -56,6 +56,7 @@
               <li><a routerLink="/batch/assignstudent" id="batchassign"><i class="fa fa-circle-o"></i><span class="sp">Assign Student</span></a></li>
               <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li>
               <li><a routerLink="/batch/studentupdation" id="studentupdation"><i class="fa fa-circle-o"></i><span class="sp">Student Updation</span></a></li>
+              <li><a routerLink="/batch/batchupdation" id="batchupdation"><i class="fa fa-circle-o"></i><span class="sp">Batch Updation</span></a></li>
             </ul> 
               </div>
             </div></div>
@@ -130,7 +131,7 @@
   <legend><b>Add Topics</b></legend>
   <form (ngSubmit)="onSubmit()">
       <div class="d-lg-flex d-md-flex flex-lg-row flex-sm-column">
-    <div class="form-group mx-3">
+    <div class="form-group col-lg-4">
       <label>Course Name :</label>
       <select class="form-control" id="cname" [(ngModel)]="test.courseId" name="courseID" #mySelect
       (change)='onOptionsSelected(mySelect.value)'>
@@ -138,14 +139,14 @@
       </select>
   </div>
 
-  <div class="form-group mx-3">
+  <div class="form-group col-lg-4">
       <label>Subject Name :</label>
       <select class="form-control" id="sname" [(ngModel)]="test.subjectId" name="subjectId"  >
           <option *ngFor="let sub of getSubject" value="{{sub.subjectId}}">{{sub.subjectName}}</option>
       </select>
   </div>
-      <div class="form-group mx-3">
-          <label>Topics name :</label>
+      <div class="form-group col-lg-4">
+          <label>Topics Name :</label>
           <select class="form-control" id="sname" [(ngModel)]="test.topicId" name="topicId"  >
             <option *ngFor="let sub of gettopic" value="{{sub.topicId}}">{{sub.topicName}}</option>
         </select>
@@ -154,7 +155,7 @@
           <button class="btn btn-primary m-3" id="submitviewc" data-toggle="modal" data-target="#exampleModal">Submit</button>
           </form>
         </fieldset></div></div>
-<fieldset class="col-xs-4 col-md-12">
+<fieldset class="col-xs-4 col-md-12 col-lg-6">
 <div class="card my-5">
     <div class="card-body">
       <div class="table-responsive">

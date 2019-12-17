@@ -1,0 +1,36 @@
+.b
+{
+    border:1px solid black !important;
+}
+legend{
+    width:auto;
+    padding:0 10px; 
+    border-bottom:none;
+    font-size: 14px;
+}
+label{
+    font-size: 12px;
+}
+ul li{
+    list-style-type:none;
+}
+.sp
+{
+    padding-left: 7px;
+}
+.navbar{
+    padding:0px !important;
+}
+.submenu li {
+    margin-left:10px;
+}
+.content-wrapper
+{
+    min-height: 616px !important;
+}
+@media (max-width: 1024px)
+{
+    .content-wrapper {
+      min-height: 970px !important;
+    }
+  }
