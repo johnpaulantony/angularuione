@@ -116,13 +116,13 @@
                   <li class="treeview" >
                       <a id="reports" routerLink="/reports/reports">
                         <i class="fa fa-file-text-o"></i>
-                       <span>Reports </span> 
+                       <span class="sp">Reports </span> 
                       </a>
                     </li>
                   <li class="treeview" >
                     <a id="otherforms" routerLink="/otherforms">
                       <i class="fa fa-file-text-o"></i>
-                     <span>OtherForms </span> 
+                     <span class="sp">OtherForms </span> 
                     </a>
                   </li>
               </ul>
@@ -135,10 +135,16 @@
                  <div class="col-lg-6 col-md-12">
                         <div class="card">
                                 <div class="card-body">
-                                    <label>Start Date:</label>
-                                    <input type="date" class="mx-2">
-                                    <label>End Date:</label>
-                                    <input type="date" class="mx-2">
+                                    
+                                    <label><b>From:</b></label>
+                                    <input type="date" id="fromdate"
+                                    name="fromdate"
+                                    #fromdate (change)="generate()" class="mx-2">
+                                    <label><b>To:</b></label>
+                                    <input type="date" id="todate"
+                                    name="todate"
+                                    #todate (change)="generate()"class="mx-2">
+                                   
                  </div>
              </div>
              </div>
@@ -147,6 +153,10 @@
                <div class="col-lg-6 col-md-12">
                   <div class="card">
                       <div class="card-body">
+                        <div class="d-flex flex-row">
+                        <p class="col-lg-6"><b class="mr-2">From:</b>{{fromdate.value}}</p>
+                        <p class="col-lg-6"><b class="mr-2">To:</b>{{todate.value}}</p>
+                      </div>
                         <div class="table-responsive">
                 <table class="table table-bordered table-striped ">
                     <thead class="thead-dark">

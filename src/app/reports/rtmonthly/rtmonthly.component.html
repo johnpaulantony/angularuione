@@ -135,19 +135,23 @@
                 <div class="col-lg-6 col-md-12">
                   <div class="card">
                          <div class="card-body">
-                         <label><b>From:</b></label>
-                         <input type="month"
-                         class="mx-2" (change)="generate()"
-                         id="frommonth"
-                         name="frommonth"
-                         #fmonth
-                         placeholder="From month"/>
-                           <label><b>To:</b></label>
-                       <input type="month" class="mx-4" (change)="generate()"
+                           <div class="col-md-3 ">
+                              <label><b>From:</b></label>
+                              <input type="month"
+                              class="mx-2 mb-2" (change)="generate()"
+                              id="frommonth"
+                              name="frommonth"
+                              #fmonth
+                              placeholder="From month"/>
+                           </div>
+                         <div class="col-md-3 ">
+                            <label><b>To:</b></label>
+                       <input type="month" class="mx-2" (change)="generate()"
                        id="tomonth"
                        name="tomonth"
                        #tomonth
                        placeholder="To month"/>
+                         </div>
                 </div>
             </div>
             </div>
@@ -157,8 +161,8 @@
                  <div class="card">
                      <div class="card-body">
                        <div class="d-flex flex-row">
-                          <p class="col-lg-6"><b class="mr-2">From:</b>{{fmonth.value}}</p>
-                          <p class="col-lg-6"><b class="mr-2">To:</b>{{tomonth.value}}</p></div>
+                          <p class="col-lg-6 col-xs-12"><b class="mr-2">From:</b>{{fmonth.value}}</p>
+                          <p class="col-lg-6 col-xs-12"><b class="mr-2">To:</b>{{tomonth.value}}</p></div>
                        <div class="table-responsive">
                <table class="table table-bordered table-striped ">
                    <thead class="thead-dark">

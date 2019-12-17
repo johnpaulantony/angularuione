@@ -15,7 +15,4 @@ export class RdailyComponent implements OnInit {
     
 
   }
-  public generate(){
-    
-  }
 }
