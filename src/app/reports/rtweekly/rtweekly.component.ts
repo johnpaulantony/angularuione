@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-rtweekly',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rtweekly.component.css']
 })
 export class RtweeklyComponent implements OnInit {
-
+  @ViewChild("fdate",{static:false}) fdate:ElementRef;
+@ViewChild("todate",{static:false}) todate:ElementRef;
   constructor() { }
 
   ngOnInit() {
   }
-
+  public generate(){
+    var fromdate = this.fdate.nativeElement.value;
+var todate = this.todate.nativeElement.value;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  }
 }

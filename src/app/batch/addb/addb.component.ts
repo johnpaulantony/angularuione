@@ -13,7 +13,6 @@ export class AddbComponent implements OnInit {
   @ViewChild("date",{static:false}) date:ElementRef;
   @ViewChild("course_name_1",{static:false}) course_name_1:ElementRef;
   @ViewChild("type",{static:false}) type:ElementRef;
-  @ViewChild("batchname",{static:false}) batchName1:ElementRef;
 result: any;
   public batch: Issue;
   course: Issue[];
@@ -39,7 +38,6 @@ result: any;
     var myresult=(d.getMonth()+1)+"/"+d.getFullYear();
     var courseValue=this.course_name_1.nativeElement.value;
     var typeValue=this.type.nativeElement.value;
-    this.batchName1.nativeElement.value=myresult+"/"+courseValue+"/"+typeValue
     this.batch.batchName=myresult+"/"+courseValue+"/"+typeValue
   }
   

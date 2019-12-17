@@ -131,8 +131,58 @@
         
         <div class="content-wrapper">
          <section class="content-header">
-                <p>rtmonthly works!</p>
-
+            <div class="row m-3">
+                <div class="col-lg-6 col-md-12">
+                  <div class="card">
+                         <div class="card-body">
+                         <label><b>From:</b></label>
+                         <input type="month"
+                         class="mx-2" (change)="generate()"
+                         id="frommonth"
+                         name="frommonth"
+                         #fmonth
+                         placeholder="From month"/>
+                           <label><b>To:</b></label>
+                       <input type="month" class="mx-2" (change)="generate()"
+                       id="tomonth"
+                       name="tomonth"
+                       #tomonth
+                       placeholder="To month"/>
+                </div>
+            </div>
+            </div>
+          </div>
+          <div class="row m-3">
+              <div class="col-lg-6 col-md-12">
+                 <div class="card">
+                     <div class="card-body">
+                       <div class="d-flex flex-row">
+                          <p class="col-lg-6"><b class="mr-2">From:</b>{{fmonth.value}}</p>
+                          <p class="col-lg-6"><b class="mr-2">To:</b>{{tomonth.value}}</p></div>
+                       <div class="table-responsive">
+               <table class="table table-bordered table-striped ">
+                   <thead class="thead-dark">
+                   <tr>
+                   <th scope="col">Batch Name</th>
+                   <th scope="col">Course Name</th>
+                   <th scope="col">Subject Name</th>
+                   <th scope="col">Topic Name</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <tr *ngFor="let courses of course1">
+                   <td>{{ courses.course_name }}</td>
+                   <td>{{ courses.description }}</td>
+                   <td>{{ courses.description }}</td>
+                   <td>{{ courses.description }}</td>
+                   </tr>
+                   </tbody>
+                   </table>
+                 </div>
+               </div>
+            </div>
+            </div>
+            </div>
           </section> 
       </div> </div>
       
