@@ -1,0 +1,23 @@
+ul li{
+    list-style-type:none;
+}
+.sp
+{
+    padding-left: 7px;
+}
+.navbar{
+    padding:0px !important;
+}
+.submenu li {
+    margin-left:10px;
+}
+.content-wrapper
+{
+    min-height: 616px !important;
+}
+@media (max-width: 1024px)
+{
+    .content-wrapper {
+      min-height: 970px !important;
+    }
+  }

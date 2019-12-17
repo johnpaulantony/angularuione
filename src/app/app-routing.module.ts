@@ -51,7 +51,10 @@ component:OtherformsComponent
     path: 'batch', 
     loadChildren:"./batch/batch.module#BatchModule"
   },
-  
+  { 
+    path: 'reports', 
+    loadChildren:"./reports/reports.module#ReportsModule"
+  }
 
 ];
 
