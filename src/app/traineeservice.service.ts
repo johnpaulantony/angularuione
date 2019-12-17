@@ -127,9 +127,6 @@ export class TraineeserviceService {
   }*/
 
 
-<<<<<<< HEAD
 }
-=======
 
-}
->>>>>>> 05e33434616611946086156f45872f2172359e51
+
