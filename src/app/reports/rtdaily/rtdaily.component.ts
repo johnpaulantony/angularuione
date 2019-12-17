@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rtdaily.component.css']
 })
 export class RtdailyComponent implements OnInit {
-
+  today = new Date();
+  date = this.today.getDate()+'-'+(this.today.getMonth()+1)+'-'+this.today.getFullYear();
   constructor() { }
 
   ngOnInit() {
