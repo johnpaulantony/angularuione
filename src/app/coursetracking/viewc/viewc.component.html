@@ -174,8 +174,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr >
-            <td *ngFor="let courses of course">{{ courses.course_name  }}</td>
+          <tr *ngFor="let courses of course">
+            <td>{{ courses.course_name  }}</td>
             <td>{{ courses.subjectName}}</td>
             <td>{{courses.topicName}}</td>
           </tr>

@@ -38,7 +38,8 @@ FusionChartsModule.fcRoot(FusionCharts, Charts,Widgets, FusionTheme);
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,BrowserModule, FormsModule,  FusionChartsModule
+    HttpClientModule,BrowserModule, FormsModule,  FusionChartsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
