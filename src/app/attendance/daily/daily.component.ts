@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Issue } from '../../models/issue';
 import { Router } from '@angular/router';
 import { TraineeserviceService } from '../../traineeservice.service';
@@ -10,59 +10,69 @@ import { Studentdetails } from 'src/app/models/StudentDetails';
   styleUrls: ['./daily.component.css']
 })
 export class DailyComponent implements OnInit {
-batch1:Issue[]
-test:Issue;
-result:any;
-course:Issue;
-sub1:any;
+  batch1: Issue[]
+  test: Issue;
+  result: any;
+  course: Issue;
+  abc:number;
+  sub1: any;
   assign: Issue[];
-  present: false;
   getassign: Studentdetails[];
-  obj:Studentdetails;
-  r:string;
+  obj: Studentdetails;
+  r: string;
   t: string;
+  present1: boolean;
+  present: boolean;
+  pre: string;
+  app: Studentdetails;
+  
+  
+ 
   onOptionsSelected(value: string) {
-    
+
     this.traineeservice.getassigned(value).subscribe(data => {
-      
       this.getassign = data;
       console.log(this.getassign)
     });
   }
-  constructor(private router: Router,public traineeservice: TraineeserviceService) { 
+  constructor(private router: Router, public traineeservice: TraineeserviceService) {
    
   }
-  @ViewChild("mystu", { static: false }) mystu: ElementRef;
-   
  
-   onchange($event){
-  
-    this.present=$event.target.checked
-    console.log(this.present)
-  }
-  generate(){
-    let r= this.mystu.nativeElement.value;
- let s=r.split("/");
- this.t=s[1];
- console.log("final"+this.t);
-   // this.r= this.mystu.nativeElement.value;
- // console.log("sur="+this.r);
-  }
-
-onSubmit(){
-  
-this.obj.studentId=this.t;
-  this.traineeservice.saveattend(this.obj).subscribe(data => { this.obj = data; console.log(this.obj) })
-}
-
-
-
-
-  ngOnInit() {
+  onchange1(value,id,date) {
     
     this.obj=new Studentdetails();
+    this.obj.attendanceDate=date
+    console.log(this.obj.attendanceDate)
+    this.obj.session = this.pre;
+    console.log('session='+this.obj.session)
+this.present1 = value.target.checked
+   this.obj.status = this.present1;
+ console.log(this.present1)
+ this.obj.studentId=id;  
+  this.traineeservice.saveattend(this.obj).subscribe(data => { this.obj = data;  })
+console.log(this.obj.studentId);
+  }
+
+  onchange(value) {
+    
+       this.present = value.target.checked
+    console.log(this.present)
+
+    if (this.present === true) {
+      this.pre = "Forenoon";
+      console.log(this.pre)
+    }
+    else {
+      this.pre = "Afternoon";
+      console.log(this.pre)
+    }
+  }
+    onSubmit(){  
+      this.traineeservice.saveattend1(this.obj).subscribe(data => { this.obj= data;  })
+    }
+  ngOnInit() {
+    this.obj = new Studentdetails();
     this.traineeservice.getbatch().subscribe(data => { this.assign = data; console.log(this.assign) })
-  
-  
   }
 }

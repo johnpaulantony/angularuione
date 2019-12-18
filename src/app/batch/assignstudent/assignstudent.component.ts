@@ -11,18 +11,13 @@ import { Studentdetails } from 'src/app/models/StudentDetails';
 export class AssignstudentComponent implements OnInit {
   getassign: Studentdetails[];
   onOptionsSelected(value: string) {
-    
     this.traineeservice.getassigned(value).subscribe(data => {
-      
       this.getassign = data;
       console.log(this.getassign)
     });
   }
   @ViewChild("mbno", { static: false }) mbno: ElementRef;
-
-  
   assign: Issue[];
-
 t:string;
   assign1: Studentdetails[];
   q: string;
@@ -31,7 +26,6 @@ sub1:any;
   constructor(public traineeservice: TraineeserviceService) {
     this.sub1=new Studentdetails();
    }
-  
   search($event) {
     let q = $event.target.value;
     console.log("test = " + q);

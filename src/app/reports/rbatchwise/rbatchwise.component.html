@@ -1,11 +1,11 @@
 <div class="wrapper">
         <header class="main-header">
-          <a href="#" class="logo">
+          <a class="logo">
           <span class="logo-mini">SMI</span>
             <span class="logo-lg"><b>SMI</b>Innothink</span>
           </a>
           <nav class="navbar navbar-static-top">
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <a href="#" id="toggle" class="sidebar-toggle" data-toggle="push-menu" role="button">
               <span class="sr-only">Toggle navigation</span>
             </a>
             <div class="navbar-custom-menu">
@@ -154,14 +154,14 @@
                 <table class="table table-bordered table-striped ">
                     <thead class="thead-dark">
                     <tr>
-                    <th scope="col">Student Names</th>
-                    <th scope="col">Total No of Working Days</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">No of Present Days</th>
+                    <th scope="col">No of Absent Days</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr *ngFor="let courses of course1">
                     <td>{{ courses.course_name }}</td>
-                    <td>{{ courses.description }}</td>
                     <td>{{ courses.description }}</td>
                     <td>{{ courses.description }}</td>
                     </tr>

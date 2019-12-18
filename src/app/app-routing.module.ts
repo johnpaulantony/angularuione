@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TopnavComponent } from './topnav/topnav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OtherformsComponent } from './otherforms/otherforms.component';
 import { LoginComponent } from './login/login.component';
@@ -18,10 +17,6 @@ const routes: Routes = [
   {
 path:'otherforms',
 component:OtherformsComponent
-  },
-  {
-    path:'topnav',
-    component:TopnavComponent
   },
   {
     path:'',

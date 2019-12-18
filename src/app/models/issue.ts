@@ -17,6 +17,7 @@ export class Issue
 	 trainerQualification:string;
      technologyUndertaken:string;
      trainerPassword:string;
+     date:string;
 }
 export class Qualification{
     degree:string;

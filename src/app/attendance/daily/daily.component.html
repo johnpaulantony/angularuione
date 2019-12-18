@@ -1,199 +1,198 @@
 <div class="wrapper">
-    <header class="main-header">
-      <a href="#" class="logo">
-      <span class="logo-mini">SMI</span>
-        <span class="logo-lg"><b>SMI</b>Innothink</span>
+  <header class="main-header">
+    <a class="logo">
+    <span class="logo-mini">SMI</span>
+      <span class="logo-lg"><b>SMI</b>Innothink</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" id="toggle" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
       </a>
-      <nav class="navbar navbar-static-top">
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-          <span class="sr-only">Toggle navigation</span>
-        </a>
-        <div class="navbar-custom-menu">
-          <ul class="nav navbar-nav d-flex flex-row">
-            <li><a id="dashboard" routerLink="/dashboard"><i class="fa fa-delicious mx-2"></i><b>Dashboard</b></a></li>
-            <li><a id="login" routerLink="/login"><i class="fa fa-power-off mx-3" style="color:white;"></i></a></li>
-            </ul>
-        </div>
-      </nav>
-    </header>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav d-flex flex-row">
+          <li><a id="dashboard" routerLink="/dashboard"><i class="fa fa-delicious mx-2"></i><b>Dashboard</b></a></li>
+          <li><a id="login" routerLink="/login"><i class="fa fa-power-off mx-3" style="color:white;"></i></a></li>
+          </ul>
+      </div>
+    </nav>
+  </header>
 
-    <aside class="main-sidebar">
-      <section class="sidebar">
-      <ul class="sidebar-menu accordion" data-widget="tree">
-          <li class="header">Main Navigation</li>
-          <li class="treeview" >
-            <a id="attendance" data-toggle="collapse" 
-            href="#multiCollapse1" role="button" aria-expanded="false" 
-            aria-controls="multiCollapse1">
-            <i class="fa fa-dashboard"></i> <span class="sp">Attendance</span>
-                   <i class="fa fa-angle-down pull-right"></i>
-                 </a>
-            <div class="row">
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapse1">
-                 <ul class="submenu"><li>
-                 <a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i><span class="sp">Daily</span></a> 
-                 </li>
-                 <li> <a id="topiccover" routerLink="/attendance/topiccov"><i class="fa fa-circle-o"></i><span class="sp">Topics Covered</span></a> 
+  <aside class="main-sidebar">
+    <section class="sidebar">
+        <ul class="sidebar-menu accordion" data-widget="tree">
+            <li class="header">Main Navigation</li>
+            <li class="treeview" >
+              <a id="attendance" data-toggle="collapse" 
+              href="#multiCollapse1" role="button" aria-expanded="false" 
+              aria-controls="multiCollapse1">
+              <i class="fa fa-dashboard"></i> <span class="sp">Attendance</span>
+                     <i class="fa fa-angle-down pull-right"></i>
+                   </a>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapse1">
+                   <ul class="submenu"><li>
+                   <a id="daily" routerLink="/attendance/daily"><i class="fa fa-circle-o"></i><span class="sp">Daily</span></a> 
+                   </li>
+                   <li> <a id="topiccover" routerLink="/attendance/topiccov"><i class="fa fa-circle-o"></i><span class="sp">Topics Covered</span></a> 
+              </li>
+                  </ul> 
+                  </div>
+                </div></div>
             </li>
+            <li class="treeview">
+              <a id="batch" data-toggle="collapse" 
+              href="#multiCollapse2" role="button" aria-expanded="false" 
+              aria-controls="multiCollapse2"><i class="fa fa-users"></i>
+              <span class="sp">Batch</span> 
+                <i class="fa fa-angle-down pull-right"></i>
+              </a>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapse2">
+                   <ul  class="submenu"><li>
+                   <a routerLink="/batch/addb" id="batchadd"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
+                   </li>
+                  <li><a routerLink="/batch/assignstudent" id="batchassign"><i class="fa fa-circle-o"></i><span class="sp">Assign Student</span></a></li>
+                  <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li>
+                  <li><a routerLink="/batch/studentupdation" id="studentupdation"><i class="fa fa-circle-o"></i><span class="sp">Student Updation</span></a></li>
+                  <li><a routerLink="/batch/batchupdation" id="batchupdation"><i class="fa fa-circle-o"></i><span class="sp">Batch Updation</span></a></li>
                 </ul> 
-                </div>
-              </div></div>
-          </li>
-          <li class="treeview">
-            <a id="batch" data-toggle="collapse" 
-            href="#multiCollapse2" role="button" aria-expanded="false" 
-            aria-controls="multiCollapse2"><i class="fa fa-users"></i>
-            <span class="sp">Batch</span> 
-              <i class="fa fa-angle-down pull-right"></i>
-            </a>
-            <div class="row">
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapse2">
-                 <ul  class="submenu"><li>
-                 <a routerLink="/batch/addb" id="batchadd"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
-                 </li>
-                <li><a routerLink="/batch/assignstudent" id="batchassign"><i class="fa fa-circle-o"></i><span class="sp">Assign Student</span></a></li>
-                <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
-                </div>
-              </div></div>
-          </li>
-          <li class="treeview" >
-            <a id="student" data-toggle="collapse" 
-            href="#multiCollapse3" role="button" aria-expanded="false" 
-            aria-controls="multiCollapse3"><i class="fa fa-user-plus"></i>
-            <span class="sp">Student</span> 
-              <i class="fa fa-angle-down pull-right"></i>
-            </a>
-            <div class="row">
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapse3">
-                 <ul class="submenu"><li>
-                 <a routerLink="/student/freshers" id="fresher"><i class="fa fa-circle-o"></i><span class="sp">Freshers</span></a> 
-                 </li>
-                <li><a routerLink="/student/upskilling" id="upskilling"><i class="fa fa-circle-o"></i><span class="sp">Upskilling</span></a></li>
-                <li><a routerLink="/student/views" id="studentview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
-                </div>
-              </div></div>
-          </li>
-          <li class="treeview" >
-            <a id="coursetracking" data-toggle="collapse" 
-            href="#multiCollapse4" role="button" aria-expanded="false" 
-            aria-controls="multiCollapse4"> <i class="fa fa-files-o"></i>
-            <span class="sp">Course Tracking</span> 
-              <i class="fa fa-angle-down pull-right"></i>
-            </a>
-            <div class="row">
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapse4">
-                 <ul class="submenu"><li>
-                 <a routerLink="/coursetracking/add" id="courseadd"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
-                 </li>
-                <li><a routerLink="/coursetracking/viewc" id="courseview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
-                </div>
-              </div></div>
-          </li>
-          <li class="treeview" >
-            <a data-toggle="collapse" 
-            href="#multiCollapse5" role="button" aria-expanded="false" 
-            aria-controls="multiCollapse5"> <i class="fa fa-user"></i>
-            <span class="sp">Trainer</span> 
-              <i class="fa fa-angle-down pull-right"></i>
-            </a>
-            <div class="row">
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapse5">
-                 <ul class="submenu"><li>
-                 <a routerLink="/trainer/addt"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
-                 </li>
-                <li><a routerLink="/trainer/viewt"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
-                </div>
-              </div></div>
-          </li>
-          <li class="treeview" >
-            <a id="otherforms" routerLink="/otherforms">
-              <i class="fa fa-file-text-o"></i>
-             <span>OtherForms </span> 
-            </a>
-          </li>
-      </ul>
-      </section>
-    </aside>
-    
-    <div class="content-wrapper">
-     <section class="content-header">
-<fieldset class="col-md-12 b">
-    <legend>Attendance</legend>
-    <form (ngSubmit)="onSubmit()">
-            <div class="d-flex flex-row">
-    <div class="form-group col-xs-2 col-md-4">
-    <label>Date:</label>
-    <input id="todaydate" type="date" class="form-control" [(ngModel)]="obj.attendanceDate" name="date" >
-    </div> 
-    <div class="col-md-12 d-flex flex-row">
-        <div class="form-group">
-            <label>Batch Name :</label>
-            <select class="form-control" id="bname" [(ngModel)]="obj.batchId" name="batchId" #mySelect (change)=' onOptionsSelected(mySelect.value)'>                        
-                <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
-
-            </select>
-          </div>
-        <div class="form-group col-md-4">
-        <label>Session:</label>
-        <select class="form-control" id="session" name="session" [(ngModel)]="obj.session" placeholder="Session">
-        <option>Forenoon</option>
-        <option>Afternoon</option>
-    </select>
-</div></div></div>
-
-<button class="btn btn-primary mx-4 my-2" id="adddaily" >Add</button>
+                  </div>
+                </div></div>
+            </li>
+            <li class="treeview" >
+              <a id="student" data-toggle="collapse" 
+              href="#multiCollapse3" role="button" aria-expanded="false" 
+              aria-controls="multiCollapse3"><i class="fa fa-user-plus"></i>
+              <span class="sp">Student</span> 
+                <i class="fa fa-angle-down pull-right"></i>
+              </a>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapse3">
+                   <ul class="submenu"><li>
+                   <a routerLink="/student/freshers" id="fresher"><i class="fa fa-circle-o"></i><span class="sp">Freshers</span></a> 
+                   </li>
+                  <li><a routerLink="/student/upskilling" id="upskilling"><i class="fa fa-circle-o"></i><span class="sp">Upskilling</span></a></li>
+                  <li><a routerLink="/student/views" id="studentview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
+                  </div>
+                </div></div>
+            </li>
+            <li class="treeview" >
+              <a id="coursetracking" data-toggle="collapse" 
+              href="#multiCollapse4" role="button" aria-expanded="false" 
+              aria-controls="multiCollapse4"> <i class="fa fa-files-o"></i>
+              <span class="sp">Course Tracking</span> 
+                <i class="fa fa-angle-down pull-right"></i>
+              </a>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapse4">
+                   <ul class="submenu"><li>
+                   <a routerLink="/coursetracking/add" id="courseadd"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
+                   </li>
+                  <li><a routerLink="/coursetracking/viewc" id="courseview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
+                  </div>
+                </div></div>
+            </li>
+            <li class="treeview" >
+              <a data-toggle="collapse" 
+              href="#multiCollapse5" role="button" aria-expanded="false" 
+              aria-controls="multiCollapse5"> <i class="fa fa-user"></i>
+              <span class="sp">Trainer</span> 
+                <i class="fa fa-angle-down pull-right"></i>
+              </a>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapse5">
+                   <ul class="submenu"><li>
+                   <a routerLink="/trainer/addt"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
+                   </li>
+                  <li><a routerLink="/trainer/viewt"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
+                  </div>
+                </div></div>
+            </li>
+            <li class="treeview" >
+                <a id="reports" routerLink="/reports/reports">
+                  <i class="fa fa-file-text-o"></i>
+                 <span class="sp">Reports </span> 
+                </a>
+              </li>
+            <li class="treeview" >
+              <a id="otherforms" routerLink="/otherforms">
+                <i class="fa fa-file-text-o"></i>
+               <span class="sp">OtherForms </span> 
+              </a>
+            </li>
+        </ul>
+    </section>
+  </aside>
   
-</form>
-</fieldset>
+  <div class="content-wrapper">
+   <section class="content-header">
+     <div class="card col-md-12 col-lg-6">
+       <div class="card-body">
+<fieldset class="col-sm-3 col-md-12 mb-2 b">
+        <legend><b>Attendance</b></legend>
+        <form (ngSubmit)="onSubmit()">
+        <div class="d-lg-flex d-md-flex flex-lg-row flex-sm-column">
+          <div class="form-group col-lg-6">
+            <label>Date:</label>
+           <input type="date" id="dailydate"
+                   class="form-control"
+                   [(ngModel)]="obj.attendanceDate"
+                   name="date">
+          </div>
+            <div class="form-group col-lg-6">
+              <label>Batch Name :</label>
+              <select class="form-control"
+                      id="bname"
+                      [(ngModel)]="obj.batchId"
+                      name="batchId"
+                      #mySelect
+                      (change)=' onOptionsSelected(mySelect.value)'>
+                <option *ngFor="let abc of assign"
+                        value="{{abc.batchId}}">{{abc.batchName}}</option>
+      
+              </select>
+            </div>
+          </div>
+        <button id="submitadd" class="btn btn-primary m-3">Add</button>
+      </form>
+      </fieldset> </div></div>
 
-
-<fieldset class="col-md-12">
-    <div class="card my-5"> 
-      <div class="card-body">
-      <table class="table table-bordered table-striped">
-      <thead class="thead-dark">
-      <tr>
-      <th scope="col">Student</th>
-<!--<th scope="col">Present/Absent</th>-->
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor='let sub of getassign' >
-        <td>
-      <input value="{{sub.studentName}}/{{sub.studentId}}" name="hi" (blur)="generate()" #myStu>{{sub.studentName}}</td>
-      <td><input type="checkbox" 
-        (change)='onchange($event)'  [(ngModel)]='obj.status' ></td>
-    
-      </tr>
-      </tbody>
-      </table>
-      </div>
-      </div>
-      </fieldset>
-     
-      <div class="row">
-
-        <div class="col-sm-2">
-          <h6>Small</h6>
-        </div>
-    
-        <div class="col-sm-5">
-          <button type="button" class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
-            <div class="handle"></div>
-          </button>
-        </div>
-    
-        <div class="col-sm-5">
-          <button type="button" class="btn btn-sm btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
-            <div class="handle"></div>
-          </button>
-        </div>
-    
-      </div>
+      <fieldset class="col-md-12 col-lg-6 col-xs-4">
+        <div class="card my-5">
+          <div class="card-body">
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Student</th>
+                  <th scope="col">Session</th>
+                  <th scope="col">Status</th>   
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let sub of getassign;'>
+                  <td>
+                    {{sub.studentName}}</td>
+                  <td> <label class="switch">
+                      <input type="checkbox" id="tog"
+                             (change)='onchange($event)'>
+                      <span class="slider round"></span>
+                    </label> </td>
+                    <td>
+                    <label class="switch">
+                      <input type="checkbox" id="tog1"
+                             (change)='onchange1($event,sub.studentId,obj.attendanceDate)'>
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                 </tr>
+              </tbody>
+            </table>
+          </div></div></div></fieldset>
     </section> 
   </div> </div>

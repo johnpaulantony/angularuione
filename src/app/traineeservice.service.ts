@@ -99,7 +99,22 @@ export class TraineeserviceService {
   }
   public saveattend(studentad: Studentdetails) {
 
-    return this.http.post<Studentdetails>(this.Url + "/insertattendance", studentad);
+    return this.http.post<Studentdetails>(this.Url + "/updateattendance",studentad);
+
+  }
+  public saveattend1(studentad: Studentdetails) {
+
+    return this.http.post<Studentdetails>(this.Url + "/insertattendance",studentad);
+
+  }
+  public savebatupdate(studentad: Studentdetails) {
+
+    return this.http.post<Studentdetails>(this.Url + "/switchbatch",studentad);
+
+  }
+  public savestuupdate(studentad: Studentdetails) {
+
+    return this.http.post<Studentdetails>(this.Url + "/swi",studentad);
 
   }
   public saveTopicCov(studtop: Issue) {

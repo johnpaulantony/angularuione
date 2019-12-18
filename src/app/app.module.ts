@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopnavComponent } from './topnav/topnav.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,7 +24,6 @@ FusionChartsModule.fcRoot(FusionCharts, Charts,Widgets, FusionTheme);
 @NgModule({
   declarations: [
     AppComponent,
-    TopnavComponent,
     DashboardComponent,
     OtherformsComponent,
     LoginComponent,

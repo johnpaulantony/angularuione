@@ -1,11 +1,11 @@
 <div class="wrapper">
         <header class="main-header">
-          <a href="#" class="logo">
+          <a class="logo">
           <span class="logo-mini">SMI</span>
             <span class="logo-lg"><b>SMI</b>Innothink</span>
           </a>
           <nav class="navbar navbar-static-top">
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <a href="#" id="toggle" class="sidebar-toggle" data-toggle="push-menu" role="button">
               <span class="sr-only">Toggle navigation</span>
             </a>
             <div class="navbar-custom-menu">
@@ -134,26 +134,26 @@
                 <div class="card col-md-12 col-lg-6">
                         <div class="card-body">
                    <fieldset class="col-sm-3 col-md-12 mb-2 b">
-                    <legend><b>Batch Updation</b></legend>
+                    <legend><b>Switch Batch</b></legend>
                     <form (ngSubmit)="onSubmit()">
          <div class="d-lg-flex d-md-flex flex-lg-row flex-sm-column">
     <div class="form-group col-lg-4">
         <label>Batch Name :</label>
-      <select class="form-control" id="batchname" name="batchname">
-    <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
-       </select>
+        <select class="form-control" id="bname"  name="batchId" #mySelect (change)='onOptionsSelected(mySelect.value)'>                        
+            <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
+        </select>
            </div>             
            <div class="form-group col-lg-4">
         <label>Student Name :</label>
-            <select class="form-control" id="studentname" name="studentname"  >
-         <option *ngFor="let sub of getSubject" value="{{sub.subjectId}}">{{sub.subjectName}}</option>
-    </select>
+        <select class="form-control" id="sname"  [(ngModel)]="bat.studentId" name="stuId">                        
+            <option *ngFor="let sub of getassign" value="{{sub.studentId}}" >{{sub.studentName}}</option>
+        </select>
     </div>
          <div class="form-group col-lg-4">
         <label>Batch Name :</label>
-    <select class="form-control" id="changebatchname" name="changebatchname"  >
-                 <option *ngFor="let sub of gettopic" value="{{sub.topicId}}">{{sub.topicName}}</option>
-         </select>
+        <select class="form-control" id="bname1" [(ngModel)]="bat.batchId"  name="batchId1">                        
+            <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
+        </select>
            </div>
     </div>
     <button class="btn btn-primary m-3" id="submitbatchupdation" data-toggle="modal" data-target="#exampleModal">Submit</button>

@@ -1,11 +1,11 @@
 <div class="wrapper">
         <header class="main-header">
-          <a href="#" class="logo">
+          <a class="logo">
           <span class="logo-mini">SMI</span>
             <span class="logo-lg"><b>SMI</b>Innothink</span>
           </a>
           <nav class="navbar navbar-static-top">
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <a href="#" id="toggle" class="sidebar-toggle" data-toggle="push-menu" role="button">
               <span class="sr-only">Toggle navigation</span>
             </a>
             <div class="navbar-custom-menu">
@@ -137,34 +137,56 @@
                      <legend><b>Student Updation</b></legend>
                      <form (ngSubmit)="onSubmit()">
                         <div class="form-group">
-                            <label>Batch :</label>
-                              <select class="form-control" id="batch" name="batch">                        
-                                    <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
-                                     </select>
-                               </div>
+                            <label>Batch Name:</label>
+                            <select class="form-control" id="bname" name="batchId" #mySelect1 [(ngModel)]='bat.batchId' (change)='onOptionsSelected(mySelect1.value)'>
+                                <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
+                               </select>
+                              </div>
           <div class="form-group">
              <label>Student Name :</label>
-      <select class="form-control" id="studentname" name="studnetname">                        
-          <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
+             <select class="form-control"
+             id="sname"
+             [(ngModel)]="bat.studentId"
+             name="stuId">
+             <option *ngFor="let sub of getassign"
+             value="{{sub.studentId}}">{{sub.studentName}}</option>
              </select>
             </div>
    <div class="form-group"> 
      <label>Date :</label>
-                <input type="date" class="form-control"
-            id="date" name="date" #date placeholder="Date">
+     <input type="date"
+     class="form-control"
+     [(ngModel)]="bat.date"
+     name="date">
              </div>
             <div class="form-group">
                <label>Student Status :</label>
-        <select class="form-control" id="studentstatus" name="studnetstatus">                        
-            <option value="deployed">Deployed</option>
-            <option value="terminated">Terminated</option>
-            <option value="discontinued">Discontinued</option>
-               </select>
+               <select class="form-control"
+               name="studnetstatus"
+               #mySelect
+               (change)='onchange(mySelect.value)'
+               [(ngModel)]="bat.status">
+           <option value="deployed">Deployed</option>
+           <option value="terminated">Terminated</option>
+           <option value="discontinued">Discontinued</option>
+       </select>
               </div>
-              <div class="form-group">
-                <label>Reason :</label>
-                <textarea  class="form-control" id="reason"></textarea>
-              </div>
+              <div class="form-group"
+                     id="team"
+                     style='display:none;'>
+                    <label>Team Name :</label><br>
+                    <input type="text" class="form-control"
+                           name="team"
+                           [(ngModel)]="bat.teamName">
+                </div>
+                <div class="form-group"
+                id="reason"
+                style='display:none;'>
+               <label>Reason :</label>
+               <textarea class="form-control"
+                         name="reason"
+                         [(ngModel)]="bat.reason"></textarea>
+           </div>
                      <button class="btn btn-primary my-2" id="submitstudnetupdation" data-toggle="modal" data-target="#exampleModal">Submit</button>
                      <br>
                  </form>

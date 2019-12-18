@@ -1,24 +1,24 @@
 <div class="wrapper">
-        <header class="main-header">
-          <a href="#" class="logo">
-          <span class="logo-mini">SMI</span>
-            <span class="logo-lg"><b>SMI</b>Innothink</span>
-          </a>
-          <nav class="navbar navbar-static-top">
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-              <span class="sr-only">Toggle navigation</span>
-            </a>
-            <div class="navbar-custom-menu">
-              <ul class="nav navbar-nav d-flex flex-row">
-                <li><a id="dashboard" routerLink="/dashboard"><i class="fa fa-delicious mx-2"></i><b>Dashboard</b></a></li>
-                <li><a id="login" routerLink="/login"><i class="fa fa-power-off mx-3" style="color:white;"></i></a></li>
-                </ul>
-            </div>
-          </nav>
-        </header>
-    
-        <aside class="main-sidebar">
-          <section class="sidebar">
+    <header class="main-header">
+      <a class="logo">
+      <span class="logo-mini">SMI</span>
+        <span class="logo-lg"><b>SMI</b>Innothink</span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a href="#" id="toggle" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav d-flex flex-row">
+            <li><a id="dashboard" routerLink="/dashboard"><i class="fa fa-delicious mx-2"></i><b>Dashboard</b></a></li>
+            <li><a id="login" routerLink="/login"><i class="fa fa-power-off mx-3" style="color:white;"></i></a></li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <aside class="main-sidebar">
+      <section class="sidebar">
           <ul class="sidebar-menu accordion" data-widget="tree">
               <li class="header">Main Navigation</li>
               <li class="treeview" >
@@ -54,7 +54,10 @@
                      <a routerLink="/batch/addb" id="batchadd"><i class="fa fa-circle-o"></i><span class="sp">Add</span></a> 
                      </li>
                     <li><a routerLink="/batch/assignstudent" id="batchassign"><i class="fa fa-circle-o"></i><span class="sp">Assign Student</span></a></li>
-                    <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li></ul> 
+                    <li><a routerLink="/batch/viewb" id="batchview"><i class="fa fa-circle-o"></i><span class="sp">View</span></a></li>
+                    <li><a routerLink="/batch/studentupdation" id="studentupdation"><i class="fa fa-circle-o"></i><span class="sp">Student Updation</span></a></li>
+                    <li><a routerLink="/batch/batchupdation" id="batchupdation"><i class="fa fa-circle-o"></i><span class="sp">Batch Updation</span></a></li>
+                  </ul> 
                     </div>
                   </div></div>
               </li>
@@ -111,58 +114,59 @@
                   </div></div>
               </li>
               <li class="treeview" >
+                  <a id="reports" routerLink="/reports/reports">
+                    <i class="fa fa-file-text-o"></i>
+                   <span class="sp">Reports </span> 
+                  </a>
+                </li>
+              <li class="treeview" >
                 <a id="otherforms" routerLink="/otherforms">
                   <i class="fa fa-file-text-o"></i>
-                 <span>OtherForms </span> 
+                 <span class="sp">OtherForms </span> 
                 </a>
               </li>
           </ul>
-          </section>
-        </aside>
-        
-        <div class="content-wrapper">
-         <section class="content-header">
-<fieldset class="col-md-12 b">
-        <legend>Attendance</legend>
-        <form (ngSubmit)="onSubmit()">
-                <div class="col-md-12 d-flex flex-row">
-                        <div class="form-group col-xs-2 col-md-4">
-                                <label>Date:</label>
-                                <input type="date" id="todaydate" class="form-control" [(ngModel)]="abcd.date" name="date" >
-                                </div>
-                                <div class="form-group">
-                                    <label>Batch Name :</label>
-                                    <select class="form-control" id="bname" [(ngModel)]="abcd.batchId" name="batchId" #mySelect (change)='onOptionsSelected(mySelect.value)'>                        
-                                        <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
-                        
-                                    </select>
-                                  </div>
-</div>
-                              <div class="form-group">
-                                    <label>Course Name :</label>
-                                    <select class="form-control" id="cname" [(ngModel)]="abcd.courseId" name="courseID" #mySelect
-                                    (change)='onOptionsSelected2(mySelect.value)'>
-                                        <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
-                              
-                                    </select>
-                                </div>
-                              
-                                <div class="form-group">
-                                    <label>Subject Name :</label>
-                                    <select class="form-control" id="sname" [(ngModel)]="abcd.subjectId" name="subjectId"  #mySelect1
-                                    (change)='onOptionsSelected1(mySelect1.value)' >
-                                        <option *ngFor="let sub of getSubject" value="{{sub.subjectId}}">{{sub.subjectName}}</option>
-                              
-                                    </select>
-                                </div>
-                                    <div class="form-group col-md-4">
-                                        <label>Topics name :</label>
-                                        <select class="form-control" id="tname" [(ngModel)]="abcd.topicId" name="topicId"  >
-                                          <option *ngFor="let sub of gettopic" value="{{sub.topicId}}">{{sub.topicName}}</option>
-                                      </select>
-                                          </div>
-                                  
-                <button class="btn btn-primary mx-4 my-2" id="addtopiccover" >Add</button>
-            </form></fieldset>
-        </section> 
+      </section>
+    </aside>
+    
+    <div class="content-wrapper">
+     <section class="content-header">
+       <div class="card col-lg-6 col-md-12">
+         <div class="card-body">
+        <fieldset class="col-md-12 col-sm-3 col-lg-12 b">
+            <legend><b>Topics Covered</b></legend>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label>Date:</label>
+        <input type="date" id="date" class="form-control" [(ngModel)]="abcd.date" name="date" >
+                </div>
+          <div class="form-group">
+              <label>Batch Name :</label>
+            <select class="form-control" id="bname" [(ngModel)]="abcd.batchId" name="batchId" #mySelect (change)='onOptionsSelected(mySelect.value)'>                        
+          <option *ngFor="let abc of assign" value="{{abc.batchId}}" >{{abc.batchName}}</option>
+            </select>
+        </div>
+      <div class="form-group">
+   <label>Course Name :</label>
+  <select class="form-control" id="cname" [(ngModel)]="abcd.courseId" name="courseID" #mySelect
+  (change)='onOptionsSelected2(mySelect.value)'>
+    <option *ngFor="let sub of course" value="{{sub.courseID}}">{{sub.course_name}}</option>
+      </select>
+  </div>
+  <div class="form-group">
+     <label>Subject Name :</label>
+    <select class="form-control" id="sname" [(ngModel)]="abcd.subjectId" name="subjectId"  #mySelect1
+      (change)='onOptionsSelected1(mySelect1.value)' >
+  <option *ngFor="let sub of getSubject" value="{{sub.subjectId}}">{{sub.subjectName}}</option>
+  </select>
+  </div>
+  <div class="form-group">
+     <label>Topics name :</label>
+    <select class="form-control" id="tname" [(ngModel)]="abcd.topicId" name="topicId"  >
+  <option *ngFor="let sub of gettopic" value="{{sub.topicId}}">{{sub.topicName}}</option>
+    </select>
+   </div>                 
+    <button id="submittopiccovered" class="btn btn-primary my-2" >Add</button>
+    </form></fieldset></div></div>
+   </section> 
     </div> </div>
